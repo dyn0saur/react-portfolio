@@ -9,7 +9,7 @@ import React from 'react';
 function Contact() {
   return (
     <section id="contact">
-      <h2>연러철</h2>
+      <h2>연락처</h2>
       <form action="https://formspree.io/f/your-form-id" method="POST">
         <label htmlFor="name">이름</label>
         <input type="text" id="name" name="name" required />
@@ -17,7 +17,7 @@ function Contact() {
         <input type="email" id="email" name="email" required />
         <label htmlFor="message">메시지</label>
         <textarea id="message" name="message" rows="5" required></textarea>
-        <button type="submit">본아기</button>
+        <button type="submit">보내기</button>
       </form>
     </section>
   );
