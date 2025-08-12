@@ -7,7 +7,7 @@ export default function Projects(){
   console.log('projects length:', list.length, list);
   return (
     <section id="projects" className="container">
-      <h2>Projects</h2>
+      <h2>Core Capabilities</h2>
       <div className="grid">
         {list.map((p, i) => (
           <ProjectCard key={p.title ? `${p.title}-${i}` : i} project={p} />

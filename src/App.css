@@ -1,9 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Castoro:ital,wght@0,400;1,400&family=DM+Sans:wght@900&display=swap');
 :root{--bg:#181617;--fg:#edece4;--muted:#cfcac2;--primary:#edece4;--accent:#fee032;--link:#ff4945;
 --radius:16px;--s1:8px;--s2:12px;--s3:16px;--s4:24px;--s5:32px;--s6:48px;--fs-m:16px;}
+
 html,body,#root{height:100%;margin:0;background:var(--bg);color:var(--fg);font-family:"Castoro",serif;font-size:var(--fs-m)}
+
 a{color:var(--link);text-decoration-color:var(--link);text-underline-offset:3px}
-h1,h2,h3{font-family:"DM Sans",sans-serif;font-weight:900;color:var(--primary)}
+
+
+h1, h2, h3 {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 900;       /* 볼드 */
+  color: var(--primary);
+  letter-spacing: -0.07em; /* 자간 줄이기: 0.9배 느낌 */
+}
+h1 {
+  font-size: 3rem;  /* 약 48px */
+}
+h2 {
+  font-size: 2.25rem; /* 약 36px */
+}
+h3 {
+  font-size: 1.75rem; /* 약 28px */
+}
+
 .container{max-width:1040px;margin:0 auto;padding:0 var(--s3)}
 .grid{display:grid;gap:var(--s4);grid-template-columns:repeat(12,1fr)}
 .card{background:#1e1c1d;border:1px solid #2a2728;border-radius:16px;padding:var(--s4)}
@@ -15,4 +34,21 @@ h1,h2,h3{font-family:"DM Sans",sans-serif;font-weight:900;color:var(--primary)}
 ::-moz-selection {
   background: var(--accent);
   color: #181617;
+}
+.badge{display:inline-block;padding:2px 8px;border-radius:0;background:var(--accent);color:#181617;font-weight:700}
+
+.card-col-4{grid-column:span 4}
+
+/* Mobile: one card per row */
+@media (max-width: 640px){
+  .grid{grid-template-columns:1fr;gap:var(--s3)}
+  .card-col-4{grid-column:1 / -1 !important}
+}
+
+.badge-tech{font-size:10px;padding:2px 6px}
+
+.section{padding:clamp(24px,12vh,20px) 0}
+
+.capability-title {
+  font-size: clamp(1.2rem, 2vw, 1.4rem);
 }

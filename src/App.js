@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Intro from './components/Intro';
-import Projects from './components/Projects';
+import Capabilities from './components/Capabilities';
 import Contact from './components/Contact';
 import ErrorBoundary from './components/ErrorBoundary';
 
@@ -10,7 +10,7 @@ export default function App(){
     <ErrorBoundary>
       <div className="App">
         <Intro />
-        <Projects />
+        <Capabilities />
         <Contact />
       </div>
     </ErrorBoundary>
