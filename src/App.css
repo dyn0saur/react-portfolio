@@ -5,6 +5,27 @@
   Tailwind CSS classes or your preferred styling solution later.
 */
 
+:root{
+  --bg:#ffffff; --fg:#111; --muted:#6b7280; --primary:#111827; --accent:#facc15;
+  --radius:16px;
+  --s1:8px; --s2:12px; --s3:16px; --s4:24px; --s5:32px; --s6:48px;
+  --fs-s:14px; --fs-m:16px; --fs-l:20px; --fs-xl:28px; --fs-2xl:36px;
+}
+html,body,#root{height:100%; background:var(--bg); color:var(--fg); margin:0}
+.container{max-width:1040px; margin:0 auto; padding:0 var(--s3)}
+.grid{display:grid; gap:var(--s4); grid-template-columns:repeat(12,1fr)}
+@media(max-width:900px){.grid{grid-template-columns:repeat(6,1fr)}}
+@media(max-width:640px){.grid{grid-template-columns:repeat(4,1fr)}}
+.h1{font-size:var(--fs-2xl); line-height:1.2; color:var(--primary); margin:var(--s6) 0 var(--s4)}
+.h2{font-size:var(--fs-xl); line-height:1.25; color:var(--primary); margin:var(--s5) 0 var(--s3)}
+.lead{font-size:var(--fs-l); color:var(--muted)}
+.badge{background:var(--accent); border-radius:8px; padding:2px 8px}
+.card{background:#fff; border:1px solid #e5e7eb; border-radius:var(--radius); padding:var(--s4);
+  transition:transform .2s ease, box-shadow .2s ease}
+.card:hover{transform:translateY(-2px); box-shadow:0 8px 24px rgba(0,0,0,.08)}
+:focus-visible{outline:3px solid #60a5fa; outline-offset:2px}
+a{color:inherit} a:hover{text-decoration:underline; text-underline-offset:3px}
+
 html, body, #root, .App {
   height: 100%;
   margin: 0;

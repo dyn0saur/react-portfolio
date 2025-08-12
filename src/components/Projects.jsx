@@ -1,22 +1,16 @@
-import React from 'react';
-import projects from '../data/projects';
-import ProjectCard from './ProjectCard';
-
-/**
- * Projects section component. This component iterates over a
- * collection of project data and renders a card for each entry.
- * Project data is imported from a separate module to make it easy
- * to update without modifying the component code.
- */
-function Projects() {
+export default function ProjectCard({ project }){
+  const { title, description, image, url, tech=[] } = project;
   return (
-    <section id="projects">
-      <h2>프로젝트</h2>
-      {projects.map((project) => (
-        <ProjectCard key={project.title} project={project} />
-      ))}
-    </section>
+    <article className="card" style={{gridColumn:'span 4'}}>
+      <a href={url} target="_blank" rel="noreferrer" style={{textDecoration:'none'}}>
+        {image && <img src={image} alt={title}
+          style={{width:'100%', borderRadius:'12px', marginBottom:'12px'}} loading="lazy" />}
+        <h3 style={{fontSize:'18px', margin:'8px 0', color:'var(--primary)'}}>{title}</h3>
+        <p style={{color:'var(--muted)', marginBottom:'12px'}}>{description}</p>
+        <div style={{display:'flex', flexWrap:'wrap', gap:'8px'}}>
+          {tech.map(t => <span key={t} className="badge">{t}</span>)}
+        </div>
+      </a>
+    </article>
   );
 }
-
-export default Projects;
