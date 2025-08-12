@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Castoro&family=DM+Sans:wght@900&display=swap');
+
 /*
   Base styles for the portfolio application. These styles are minimal
   by design and intended to provide a pleasant starting point for
@@ -6,12 +8,14 @@
 */
 
 :root{
-  --bg:#ffffff; --fg:#111; --muted:#6b7280; --primary:#111827; --accent:#facc15;
+  --bg:#181617; --fg:#edece4; --muted:#6b7280; --primary:#edece4; --accent:#fee032; --link:#ff4945;
+  
   --radius:16px;
   --s1:8px; --s2:12px; --s3:16px; --s4:24px; --s5:32px; --s6:48px;
   --fs-s:14px; --fs-m:16px; --fs-l:20px; --fs-xl:28px; --fs-2xl:36px;
 }
-html,body,#root{height:100%; background:var(--bg); color:var(--fg); margin:0}
+hhtml,body,#root{height:100%; background:var(--bg); color:var(--fg); margin:0; font-family:'Castoro', serif;}
+
 .container{max-width:1040px; margin:0 auto; padding:0 var(--s3)}
 .grid{display:grid; gap:var(--s4); grid-template-columns:repeat(12,1fr)}
 @media(max-width:900px){.grid{grid-template-columns:repeat(6,1fr)}}
@@ -30,12 +34,18 @@ html, body, #root, .App {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  fontfont-family:'Castoro', serif;
+  
+  
     Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
-
 .App {
-  display: flex;
+    display: flex;
+
+.App {display: flex;
+      
+  displafont-family:'Castoro', serif;
+  
   flex-direction: column;
   align-items: center;
 }
@@ -74,4 +84,22 @@ button {
 
 button:hover {
   background-color: #005fa3;
+}
+  /* Additional theme overrides */
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1, h2, h3 {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 900;
+  font-size: 24pt;
+  color: var(--fg);
+}
+
+a {
+  color: var(--link);
+  text-decoration-color: var(--link);
 }
