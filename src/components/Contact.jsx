@@ -10,7 +10,7 @@ function Contact() {
   return (
     <section id="contact">
       <h2>연락처</h2>
-      <form action="https://formspree.io/f/your-form-id" method="POST">
+      <form action="https://formspree.io/f/xdkdbelv" method="POST">
         <label htmlFor="name">이름</label>
         <input type="text" id="name" name="name" required />
         <label htmlFor="email">이메일</label>
