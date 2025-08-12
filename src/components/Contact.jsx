@@ -2,12 +2,10 @@ import React from 'react';
 export default function Contact(){
   return (
     <section id="contact" className="container">
-      <h2>연락처</h2>
-      <p>email: dyn0saur.527@gmail.com</p>
-      <p>phone:
-        
-      </p>
-      <p><a href="mailto:dyn0saur.527@gmail.com">메일 보내기</a></p>
+      <h2>Contact</h2>
+      <p>mail: <a href="mailto:dyn0saur.527@gmail.com">dyn0saur.527@gmail.com</a></p>
+      <p>blog: <a href="https://blog.naver.com/dyn0saur">blog.naver.com/dyn0saur</a></p>
+      <p>phone:</p>     
     </section>
   );
 }
