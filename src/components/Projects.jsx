@@ -1,16 +1,18 @@
-export default function ProjectCard({ project }){
-  const { title, description, image, url, tech=[] } = project;
+import React from 'react';
+import projects from '../data/projects';
+import ProjectCard from './ProjectCard';
+
+export default function Projects(){
+  const list = Array.isArray(projects) ? projects.filter(p => p && typeof p === 'object') : [];
+  console.log('projects length:', list.length, list);
   return (
-    <article className="card" style={{gridColumn:'span 4'}}>
-      <a href={url} target="_blank" rel="noreferrer" style={{textDecoration:'none'}}>
-        {image && <img src={image} alt={title}
-          style={{width:'100%', borderRadius:'12px', marginBottom:'12px'}} loading="lazy" />}
-        <h3 style={{fontSize:'18px', margin:'8px 0', color:'var(--primary)'}}>{title}</h3>
-        <p style={{color:'var(--muted)', marginBottom:'12px'}}>{description}</p>
-        <div style={{display:'flex', flexWrap:'wrap', gap:'8px'}}>
-          {tech.map(t => <span key={t} className="badge">{t}</span>)}
-        </div>
-      </a>
-    </article>
+    <section id="projects" className="container">
+      <h2>Projects</h2>
+      <div className="grid">
+        {list.map((p, i) => (
+          <ProjectCard key={p.title ? `${p.title}-${i}` : i} project={p} />
+        ))}
+      </div>
+    </section>
   );
 }
