@@ -1,22 +1,19 @@
 const projects = [
   { title: 'Architectural Competence',
     description: 'Architectural expertise applied from concept to construction.',
-    image: '',
-    url: '',
+    imageClass: "cap-1",
     tech: ['Collaboration','Technical Proficiency', 'Design Coordination']
   },
   { 
-  title: 'Facade Engineering',
+  title: 'Engineering Experience',
   description: 'From detailed drawings to precise, fabrication-ready solutions.',
-  image: '',
-  url: '',
+  imageClass: "cap-2",
   tech: ['BIM Integration','Construction Detailing','Digital Fabrication'] 
   },
   { title: 'Rhino + Grasshopper',
     description: '3D parametric design tool for complex forms and efficient automation.',
-    image: '',
-    url: '',
-    tech: ['Digital Forming','Data-Driven Modeling', 'Automation']
+    imageClass: "cap-3",
+    tech: ['Digital Forming','Data-Driven Modeling', 'Model-to-Fabrication Automation']
 }
 ];
 export default projects;

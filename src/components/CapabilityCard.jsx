@@ -1,36 +1,43 @@
 import React from 'react';
 
-function resolveImageSrc(image) {
-  if (!image) return null;
-  if (/^https?:\/\//i.test(image)) return image;
-  if (image.startsWith('/')) return `${process.env.PUBLIC_URL}${image}`;
-  return `${process.env.PUBLIC_URL}/${image}`;
-}
-
 export default function CapabilityCard({ project = null }) {
   if (!project || typeof project !== 'object') return null;
 
   const {
     title = 'Untitled',
     description = '',
-    image = '',
-    url = '',
-    tech = []
-  } = project ?? {};
-
-  const imgSrc = resolveImageSrc(image);
+    imageClass = '',   // CSS로 관리하는 썸네일 클래스
+    image = '',        // (호환용) 개별 이미지 경로를 쓰는 경우
+    url = '',          // (선택) 외부 링크가 있는 경우
+    tech = [],
+  } = project;
 
   return (
     <article className="card card-col-4 cap-card">
-      {imgSrc && <img src={imgSrc} alt={title} style={{width:'100%',borderRadius:'12px',marginBottom:'12px'}} />}
+      {/* CSS 기반 썸네일 */}
+      {imageClass && <div className={`cap-thumb ${imageClass}`} aria-hidden="true" />}
+
+      {/* 과거 방식(이미지 경로 직접)도 지원 */}
+      {!imageClass && image && (
+        <img className="cap-img" src={image} alt={title} />
+      )}
+
       <h3 className="capability-title">{title}</h3>
-      {description && <p style={{ opacity:.85 }}>{description}</p>}
+      {description && <p className="cap-desc">{description}</p>}
+
       {Array.isArray(tech) && tech.length > 0 && (
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-          {tech.map((t, i) => <span key={`${t}-${i}`} className="badge badge-tech">{t}</span>)}
+        <div className="cap-tags">
+          {tech.map((t, i) => (
+            <span key={`${t}-${i}`} className="badge badge-tech">{t}</span>
+          ))}
         </div>
       )}
-      {url && <p style={{marginTop:12}}><a href={url} target="_blank" rel="noreferrer">View</a></p>}
+
+      {url && (
+        <p className="cap-link">
+          <a href={url} target="_blank" rel="noreferrer">View</a>
+        </p>
+      )}
     </article>
   );
 }

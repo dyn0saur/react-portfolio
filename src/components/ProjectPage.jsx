@@ -1,14 +1,18 @@
 // src/components/ProjectPage.jsx
-import React from "react";
-import SmartplanAI from "../projects/SmartplanAI";
-import OneBluePlanet from "../projects/OneBluePlanet";
+import React, { useEffect } from "react";
+import Thesis from "../projects/Thesis";
+import Jungle from "../projects/Jungle";
 
 const map = {
-  "smartplan-ai": SmartplanAI,
-  "one-blue-planet": OneBluePlanet,
+  "thesis": Thesis,
+  "jungle": Jungle,
 };
 
 export default function ProjectPage({ slug }) {
+  useEffect(() => {
+    window.scrollTo(0, 0); // 페이지 로드 시 스크롤 맨 위로 이동
+  }, []);
+  
   const Project = map[slug];
   if (!Project) {
     return (
