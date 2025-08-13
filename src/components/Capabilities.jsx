@@ -7,7 +7,7 @@ export default function Capabilities(){
   console.log('capabilities length:', list.length, list);
   return (
     <section id="capabilities" className="container section">
-      <h2>Core Capabilities</h2>
+      <h2>What I bring to the table..</h2>
       <div className="grid">
         {list.map((p, i) => (
           <CapabilityCard key={p.title ? `${p.title}-${i}` : i} project={p} />
