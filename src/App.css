@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Castoro:ital,wght@0,400;1,400&family=DM+Sans:wght@900&display=swap');
 :root{--bg:#181617;--fg:#edece4;--muted:#cfcac2;--primary:#edece4;--accent:#fee032;--link:#ff4945;
---radius:16px;--s1:8px;--s2:12px;--s3:16px;--s4:24px;--s5:32px;--s6:48px;--fs-m:16px;}
+--radius:16px;--s1:0px;--s2:12px;--s3:16px;--s4:24px;--s5:32px;--s6:48px;--fs-m:16px;}
 
 html,body,#root{height:100%;margin:0;background:var(--bg);color:var(--fg);font-family:"Castoro",serif;font-size:var(--fs-m)}
 
@@ -61,5 +61,71 @@ u {
   text-decoration: none; /* 밑줄 유지 */
   font-weight: 500;           /* 굵게 */
   color: var(--link);             /* 글자색 노랑 */
-  font-size: 1.1em;           /* 살짝 크게 (현재 크기의 105%) */
+  font-size: 1.14em;           /* 살짝 크게 (현재 크기의 105%) */
+}
+
+/* 기본 (인라인) */
+.inline-links {
+  margin-top: var(--s3);
+  line-height: 1.9;
+}
+
+/* 이 인스턴스만 간격을 더 붙이고 싶을 때 */
+.inline-links--tight {
+  margin-top: var(--s1); /* 기존 var(--s3)보다 좁게 */
+}
+/* 줄바꿈(스택) 모드 */
+.inline-links--stacked .inline-link-item {
+  display: block;        /* a 태그를 블록으로 -> 줄바꿈 */
+}
+.inline-links--stacked .inline-link-item + .inline-link-item {
+  margin-top: 0.25rem;   /* 항목 간 세로 간격 */
+}
+/* 점 구분자 안 씀 -> sep 관련 규칙 필요 없음 */
+
+.scroll-down-wrap{
+  display: flex;
+  justify-content: center;   /* 가운데 배치 */
+  margin-top: var(--s3);
+  padding: var(--s3) 0 var(--s2);
+}
+
+.scroll-down{
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  border: 1.5px solid var(--accent);
+  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform .15s ease, opacity .15s ease, background .15s ease;
+  opacity: .9;
+}
+
+.scroll-down:hover{
+  transform: translateY(2px);
+  opacity: 1;
+  background: rgba(254,224,50,0.08);
+}
+
+
+/* Intro 리스트 스타일: 살짝 인덴트 + 대시 불릿 */
+.intro-list {
+  list-style: none;            /* 기본 점 제거 */
+  margin: var(--s2) 0 var(--s3);
+  padding-left: 1.25rem;       /* 살짝 안쪽으로 */
+}
+.intro-list li {
+  position: relative;
+  line-height: 1.8;
+  margin: 0.2rem 0;
+}
+.intro-list li::before {
+  content: "-";                /* 대시 불릿 */
+  position: absolute;
+  left: -1.25rem;              /* 들여쓰기와 맞춤 */
+  top: 0;
+  color: var(--muted);
 }
