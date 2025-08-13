@@ -10,9 +10,9 @@ export default function Intro(){
           <p className="intro-text">
             I mean… who are <u>you</u> ?<br />
             Are you the person I’m looking for—<br />
-            someone who appreciates how <u>computational methods</u> transform design concepts into <u>reality</u> ?<br />
-            someone who values carrying <u>conceptual thinking</u> through to <u>practical execution</u> ?<br />
-            someone who embraces the balance between <u>aesthetics</u> with <u>performance</u> ?<br /><br />
+            someone who values how <u>computational methods</u> transform design concepts into <u>reality</u> ?<br />
+            someone who values carrying <u>conceptual thinking</u> through to <u>real-world execution</u> ?<br />
+            someone who values the balance between <u>aesthetics</u> and <u>practicality</u> ?<br /><br />
             Then…<br /><br />
             Pleasure to meet you,
             <h1>I'm <span className="badge">Geonju Kim</span></h1>
