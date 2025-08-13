@@ -1,6 +1,6 @@
 const projects = [
   { title: 'Architectural Competence',
-    description: 'Architectural expertise applied from from concept to construction.',
+    description: 'Architectural expertise applied from concept to construction.',
     image: '',
     url: '',
     tech: ['Collaboration','Technical Proficiency', 'Design Coordination']
