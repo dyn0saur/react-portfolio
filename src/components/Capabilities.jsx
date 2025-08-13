@@ -1,16 +1,18 @@
+// src/components/Capabilities.jsx
 import React, { useEffect } from "react";
 import capabilities from "../data/capabilities";
 import CapabilityCard from "./CapabilityCard";
 
 export default function Capabilities() {
-  // 해시 진입 시에도 맨 위에 붙이기
   useEffect(() => {
     if (window.location.hash === "#core") {
       setTimeout(() => {
-        const el = document.getElementById("core");
+        const el = document.getElementById("core-panel"); // ← 섹션을 타깃
         if (!el) return;
-        const y = el.getBoundingClientRect().top + window.scrollY; // 요소의 절대 Y
-        window.scrollTo({ top: y, behavior: "smooth" });
+        const y = el.getBoundingClientRect().top + window.scrollY;
+        const base = y - (window.innerHeight / 2 - el.offsetHeight / 2);
+        const OFFSET = -40; // 원하는 값으로 조절
+        window.scrollTo({ top: base + OFFSET, behavior: "smooth" });
       }, 0);
     }
   }, []);
@@ -20,7 +22,7 @@ export default function Capabilities() {
     : [];
 
   return (
-    <section className="container section section--core" aria-labelledby="core">
+    <section id="core-panel" className="container section" aria-labelledby="core">
       <h2 id="core">What I bring to the table..</h2>
       <div className="grid">
         {list.map((p, i) => (

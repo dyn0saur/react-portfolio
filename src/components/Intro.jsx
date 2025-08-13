@@ -6,7 +6,6 @@ export default function Intro(){
       <div className="grid" style={{ alignItems:'center', minHeight:'40vh' }}>
         <div style={{ gridColumn:'span 12' }}>
           <h2>
-            May I ask… <br />
             <span className="badge">Who are you?</span>
           </h2>
 

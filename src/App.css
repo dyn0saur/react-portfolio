@@ -129,3 +129,22 @@ u {
   top: 0;
   color: var(--muted);
 }
+
+/* PC에서만 적용: Capabilities가 화면 중앙, 아래 화살표는 맨 아래 */
+@media (min-width: 1024px) {
+  .panel-fullvh {
+    min-height: 100vh;              /* 한 화면 꽉 채움 */
+    display: flex;
+    flex-direction: column;
+  }
+  /* Capabilities 섹션(내부 .section)을 수직 중앙으로 */
+  .panel-fullvh > .section {
+    margin-top: auto;
+    margin-bottom: auto;            /* 위아래 auto → 수직 중앙 정렬 효과 */
+  }
+  /* 아래 화살표를 맨 아래로 밀기 */
+  .panel-fullvh > .scroll-down-wrap {
+    margin-top: auto;               /* 남는 공간을 위로 밀어 버튼은 아래로 */
+    padding-bottom: var(--s4);      /* 살짝 여백 (원하는 만큼 조절) */
+  }
+}
