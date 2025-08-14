@@ -1,4 +1,4 @@
-// src/projects/SmartplanAI.jsx
+// src/projects/Jungle.jsx
 import React from "react";
 import Template from "./Template";
 
