@@ -19,7 +19,7 @@ export default function CapabilityCard({ project = null }) {
 
       {/* 과거 방식(이미지 경로 직접)도 지원 */}
       {!imageClass && image && (
-        <img className="cap-img" src={image} alt={title} />
+        <img className="cap-img" src={image} alt={title} loading="lazy" />
       )}
 
       <h3 className="capability-title">{title}</h3>

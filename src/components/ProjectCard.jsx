@@ -22,7 +22,14 @@ export default function ProjectCard({ project = null }) {
 
   return (
     <article className="card card-col-4">
-      {imgSrc && <img src={imgSrc} alt={title} style={{width:'100%',borderRadius:'12px',marginBottom:'12px'}} />}
+      {imgSrc && (
+        <img
+          src={imgSrc}
+          alt={title}
+          style={{width:'100%',borderRadius:'12px',marginBottom:'12px'}}
+          loading="lazy"
+        />
+      )}
       <h3 style={{ fontSize: 18, margin: '8px 0' }}>{title}</h3>
       {description && <p style={{ opacity:.85 }}>{description}</p>}
       {Array.isArray(tech) && tech.length > 0 && (
