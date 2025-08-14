@@ -190,6 +190,7 @@ u {
 .lightbox-img {
   flex-shrink: 0;
   cursor: zoom-out;
+  
 }
 .lightbox-close {
   position: absolute;
