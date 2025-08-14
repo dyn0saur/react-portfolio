@@ -9,10 +9,12 @@ export default function ScrollButton({ targetId, align = "start", offset = 0, cl
     const el = document.getElementById(targetId);
     if (!el) return;
     const y = el.getBoundingClientRect().top + window.scrollY;
-    const base = align === "center"
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+    const base = align === "center" && !isMobile
       ? y - (window.innerHeight / 2 - el.offsetHeight / 2)
       : y;
-    window.scrollTo({ top: base + offset, behavior: "smooth" });
+    const extra = isMobile ? 0 : offset;
+    window.scrollTo({ top: base + extra, behavior: "smooth" });
 
     if (history.replaceState) history.replaceState(null, "", `#${targetId}`);
     else window.location.hash = `#${targetId}`;
