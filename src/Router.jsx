@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Home from "./pages/Home";
 import ProjectPage from "./components/ProjectPage";
 
-function parseHash() {
+export function parseHash() {
   const h = window.location.hash || "";
   const m = h.match(/^#\/(?:projects\/([\w-]+))?$/);
   if (m && m[1]) return { route: "project", slug: m[1] };
