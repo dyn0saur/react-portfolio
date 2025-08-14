@@ -185,10 +185,12 @@ u {
   align-items: center;
   justify-content: center;
   z-index: 1000;
+  overflow: auto;
 }
 .lightbox-img {
-  max-width: 90%;
-  max-height: 90%;
+  flex-shrink: 0;
+  cursor: zoom-out;
+  
 }
 .lightbox-close {
   position: absolute;

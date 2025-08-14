@@ -22,7 +22,12 @@ export default function LightboxImage({ src, thumb, alt = '', className = '', st
             aria-label="Close"
             onClick={() => setOpen(false)}
           >×</button>
-          <img src={src} alt={alt} className="lightbox-img" />
+          <img
+            src={src}
+            alt={alt}
+            className="lightbox-img"
+            onClick={() => setOpen(false)}
+          />
         </div>
       )}
     </>
