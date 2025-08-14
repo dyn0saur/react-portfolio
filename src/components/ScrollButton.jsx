@@ -13,7 +13,8 @@ export default function ScrollButton({ targetId, align = "start", offset = 0, cl
     const base = align === "center" && !isMobile
       ? y - (window.innerHeight / 2 - el.offsetHeight / 2)
       : y;
-    window.scrollTo({ top: base + offset, behavior: "smooth" });
+    const extra = isMobile ? 0 : offset;
+    window.scrollTo({ top: base + extra, behavior: "smooth" });
 
     if (history.replaceState) history.replaceState(null, "", `#${targetId}`);
     else window.location.hash = `#${targetId}`;
