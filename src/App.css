@@ -176,3 +176,29 @@ u {
 .cap-card .cap-desc { opacity: .85; }
 .cap-card .cap-tags { display: flex; flex-wrap: wrap; gap: 8px; }
 .cap-card .cap-link { margin-top: 12px; }
+/* Lightbox styles */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  overflow: auto;
+}
+.lightbox-img {
+  flex-shrink: 0;
+  cursor: zoom-out;
+}
+.lightbox-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border: none;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+}

@@ -29,7 +29,7 @@ export default function ProjectsList() {
         {projects.map((p) => (
           <article className="project-row" key={p.slug}>
             <a href={`#/projects/${p.slug}`} onClick={(e) => go(p.slug, e)} className="project-thumb">
-              <img src={p.hero} alt={p.title} />
+              <img src={p.thumb || p.hero} alt={p.title} loading="lazy" />
             </a>
             <div className="project-body">
               <h3 className="project-title">
