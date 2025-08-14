@@ -149,33 +149,6 @@ u {
   }
 }
 
-/* 프로젝트 상세 페이지 전체 컨테이너 */
-.project-detail {
-  line-height: 1.9;
-}
-
-/* 프로젝트 대표 이미지(히어로) */
-.project-detail .project-hero img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 12px;
-  margin-bottom: 1.25rem; /* 제목과 간격 */
-}
-
-/* 프로젝트 내용 안의 본문 단락 */
-.project-detail .project-content p {
-  margin-bottom: 1.25rem;
-}
-
-/* 프로젝트 내용 안의 이미지 */
-.project-detail .project-content img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  margin: 1rem 0;
-}
-
 .cap-1 {
   background-image: url("./assets/capabilities/cap-1.png");
 }

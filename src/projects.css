@@ -37,3 +37,12 @@
   margin-bottom: 1.25rem;
 }
 .project-detail .project-content { line-height: 1.9; }
+.project-detail .project-content p {
+  margin-bottom: 1.25rem;
+}
+.project-detail .project-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin: 1rem 0;
+}
