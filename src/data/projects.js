@@ -5,8 +5,6 @@ const projects = [
     "title": "[Insight] Budget Problem? Or... A Hard Problem?",
     "excerpt": "A reflection on architectural detailing challenges observed in the gridshell structures of Galleria Gwanggyo and Ttukseom Jabeolle, exploring how complex design problems are solved through creativity and engineering insight.",
     "hero": "/images/projects/budget_problem/hero.png",
-    "heroSmall": "/images/projects/budget_problem/hero.png",
-    "thumb": "/images/projects/budget_problem/hero.png",
     "content": [
       {
         "type": "paragraph",

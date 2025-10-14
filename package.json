@@ -12,7 +12,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "generate:thumbs": "node scripts/generate-thumbnails.js"
+  },
+  "devDependencies": {
+    "sharp": "^0.33.3"
   },
   "browserslist": {
     "production": [

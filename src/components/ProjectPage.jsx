@@ -65,7 +65,7 @@ export default function ProjectPage({ slug }) {
     <Template
       title={project.title}
       hero={project.hero}
-      heroSmall={project.heroSmall || project.hero}
+      heroThumb={project.heroThumb || project.heroSmall || project.thumb}
     >
       {(project.content || []).map((block, index) => renderBlock(block, index))}
     </Template>

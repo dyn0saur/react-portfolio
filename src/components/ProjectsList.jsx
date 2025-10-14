@@ -1,6 +1,11 @@
 // src/components/ProjectsList.jsx
 import React, { useEffect } from "react";
 import projects from "../data/projects";
+import { deriveThumbSrc } from "./LightboxImage";
+
+function getProjectThumb(project) {
+  return project.listThumb || project.thumb || deriveThumbSrc(project.hero) || project.hero;
+}
 
 export default function ProjectsList() {
   useEffect(() => {
@@ -29,7 +34,16 @@ export default function ProjectsList() {
         {projects.map((p) => (
           <article className="project-row" key={p.slug}>
             <a href={`#/projects/${p.slug}`} onClick={(e) => go(p.slug, e)} className="project-thumb">
-              <img src={p.thumb || p.hero} alt={p.title} loading="lazy" />
+              <img
+                src={getProjectThumb(p)}
+                alt={p.title}
+                loading="lazy"
+                onError={(event) => {
+                  if (event.currentTarget.src !== p.hero) {
+                    event.currentTarget.src = p.hero;
+                  }
+                }}
+              />
             </a>
             <div className="project-body">
               <h3 className="project-title">
