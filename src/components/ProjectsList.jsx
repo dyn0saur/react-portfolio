@@ -24,7 +24,7 @@ export default function ProjectsList() {
 
   return (
     <section className="container section" aria-labelledby="projects">
-      <h2 id="projects">What I have done..</h2>
+      <h2 id="projects">What I have done, or written..</h2>
       <div className="projects-list">
         {projects.map((p) => (
           <article className="project-row" key={p.slug}>

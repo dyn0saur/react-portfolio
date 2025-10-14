@@ -1,0 +1,1 @@
+Add a new project by duplicating an entry in src/data/projects.js and verifying the detail view renders as expected.
