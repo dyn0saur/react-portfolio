@@ -85,8 +85,8 @@ const project = {
     },
     {
       type: "image",
-      src: "/images/projects/design_tool/6.jpg",
-      alt: "Parametric connection modeling",
+      src: "/images/projects/design_tool/6.png",
+      alt: "grasshopper",
     },
     {
       type: "paragraph",
@@ -94,7 +94,7 @@ const project = {
     },
     {
       type: "image",
-      src: "/images/projects/design_tool/7.jpg",
+      src: "/images/projects/design_tool/7.png",
       alt: "Constraint boundary visualization",
     },
     {
