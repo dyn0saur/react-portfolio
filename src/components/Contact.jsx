@@ -3,7 +3,11 @@ import React from "react";
 
 const LINKS = [
   { label: "contact@geonjukim.com", href: "mailto:contact@geonjukim.com" },
-  { label: "Resume", href: "...", external: true },
+  {
+    label: "Resume",
+    href: "https://docs.google.com/document/d/1EsvKRr3TMLbSUXY82zXz7-LRdAI9_UsiyEUioZhTVUU/edit?usp=sharing",
+    external: true,
+  },
 ];
 
 // 사용: <Contact stacked tight />  // 줄바꿈 + 위쪽 간격 타이트

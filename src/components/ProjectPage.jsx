@@ -306,6 +306,8 @@ export default function ProjectPage({ slug }) {
   return (
     <Template
       title={project.title}
+      category={project.category}
+      date={project.date}
       hero={project.hero}
       heroThumb={project.heroThumb || project.heroSmall || project.thumb}
     >

@@ -49,6 +49,22 @@ export default function ProjectsList() {
               <h3 className="project-title">
                 <a href={`#/projects/${p.slug}`} onClick={(e) => go(p.slug, e)}>{p.title}</a>
               </h3>
+              {(p.category || p.date) && (
+                <dl className="project-meta" aria-label="project details">
+                  {p.category && (
+                    <>
+                      <dt className="project-meta__label">Category</dt>
+                      <dd className="project-meta__value">{p.category}</dd>
+                    </>
+                  )}
+                  {p.date && (
+                    <>
+                      <dt className="project-meta__label">Date</dt>
+                      <dd className="project-meta__value">{p.date}</dd>
+                    </>
+                  )}
+                </dl>
+              )}
               <p className="project-excerpt">{p.excerpt}</p>
             </div>
           </article>

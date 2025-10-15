@@ -2,7 +2,7 @@
 import React from "react";
 import LightboxImage from "../components/LightboxImage";
 
-export default function Template({ title, hero, heroThumb, children }) {
+export default function Template({ title, category, date, hero, heroThumb, children }) {
   return (
     <article className="container section project-detail">
       {hero && (
@@ -11,6 +11,22 @@ export default function Template({ title, hero, heroThumb, children }) {
         </div>
       )}
       <h1><span className="badge">{title}</span></h1>
+      {(category || date) && (
+        <dl className="project-meta project-meta--detail" aria-label="project details">
+          {category && (
+            <>
+              <dt className="project-meta__label">Category</dt>
+              <dd className="project-meta__value">{category}</dd>
+            </>
+          )}
+          {date && (
+            <>
+              <dt className="project-meta__label">Date</dt>
+              <dd className="project-meta__value">{date}</dd>
+            </>
+          )}
+        </dl>
+      )}
       <div className="project-content">
         {children}
       </div>
