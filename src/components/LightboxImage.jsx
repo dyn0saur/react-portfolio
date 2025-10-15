@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { forwardRef, useMemo, useState } from "react";
 
 export function deriveThumbSrc(source) {
   if (!source) return null;
@@ -14,7 +14,7 @@ export function deriveThumbSrc(source) {
   return thumb;
 }
 
-export default function LightboxImage({ src, thumb, alt = "", className = "", style = {}, ...props }) {
+const LightboxImage = forwardRef(function LightboxImage({ src, thumb, alt = "", className = "", style = {}, ...props }, ref) {
   const [open, setOpen] = useState(false);
   const [fallback, setFallback] = useState(false);
   const displaySrc = useMemo(() => {
@@ -22,16 +22,28 @@ export default function LightboxImage({ src, thumb, alt = "", className = "", st
     return thumb || deriveThumbSrc(src) || src;
   }, [fallback, src, thumb]);
 
+  const composedStyle = useMemo(() => {
+    const hasExplicitWidth = style && (style.width || style.minWidth || style.maxWidth);
+    const hasExplicitHeight = style && (style.height || style.minHeight);
+    const disableAutoMaxWidth = Boolean(hasExplicitWidth);
+    return {
+      cursor: "zoom-in",
+      maxWidth: disableAutoMaxWidth ? "none" : "100%",
+      ...style,
+    };
+  }, [style]);
+
   return (
     <>
       <img
         src={displaySrc}
         alt={alt}
         className={className}
-        style={{ cursor: "zoom-in", maxWidth: "100%", ...style }}
+        style={composedStyle}
         loading="lazy"
         onClick={() => setOpen(true)}
         onError={() => setFallback(true)}
+        ref={ref}
         {...props}
       />
       {open && (
@@ -52,4 +64,6 @@ export default function LightboxImage({ src, thumb, alt = "", className = "", st
       )}
     </>
   );
-}
+});
+
+export default LightboxImage;

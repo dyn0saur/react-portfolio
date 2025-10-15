@@ -40,9 +40,20 @@
 .project-detail .project-content p {
   margin-bottom: 1.25rem;
 }
-.project-detail .project-content img {
-  width: 100%;
+.project-detail .project-content img:not(.project-image-row__item) {
+  display: block;
+  max-width: 100%;
   height: auto;
   border-radius: 12px;
-  margin: 1rem 0;
+  margin: 1rem auto;
+}
+
+@media (max-width: 640px) {
+  .project-detail .project-content {
+    padding: 0 var(--s2);
+  }
+  .project-detail .project-content .project-image-row {
+    margin: 16px auto;
+    max-width: calc(100% - (var(--s2) * 2));
+  }
 }

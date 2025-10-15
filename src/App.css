@@ -203,3 +203,28 @@ u {
   line-height: 1;
   cursor: pointer;
 }
+.project-image-row {
+  display: flex;
+  gap: 16px;
+  margin: 16px auto;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: flex-end;
+  width: auto;
+  max-width: 100%;
+}
+
+.project-image-row__item {
+  flex: 0 0 auto;
+  display: block;
+  height: auto;
+  max-width: 100%;
+  width: auto;
+  border-radius: 8px;
+}
+
+@media (max-width: 600px) {
+  .project-image-row {
+    gap: 12px;
+  }
+}

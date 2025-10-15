@@ -7,18 +7,40 @@ const projects = [
     "hero": "/images/projects/budget_problem/hero.png",
     "content": [
       {
+        "type": "imageRow",
+        "columns": 2,
+        "images": [
+          {
+            "src": "/images/projects/budget_problem/1-1.jpg",
+            "alt": "Galleria Gwanggyo (Left)"
+          },
+          {
+            "src": "/images/projects/budget_problem/1-2.jpg",
+            "alt": "Ttukseom Jabeolle (right)"
+          }
+        ]
+      },
+      {
         "type": "paragraph",
         "text": "While walking near Ttukseom, I noticed that the window structure of the Jabeolle Pavilion had the same triangular gridshell curtain wall form as the Galleria Gwanggyo Department Store. Curious, I looked closer to see how the corners were treated."
       },
       {
-        "type": "image",
-        "src": "/images/projects/budget_problem/project_1.png",
-        "alt": "Galleria Gwanggyo (left) and Ttukseom Jabeolle (right)"
-      },
-      {
-        "type": "image",
-        "src": "/images/projects/budget_problem/project_1_1.png",
-        "alt": "Curtainwall Joints of Ttukseom Jabeolle"
+        "type": "imageRow",
+        "columns": 3,
+        "images": [
+          {
+            "src": "/images/projects/budget_problem/2-1.jpg",
+            "alt": "jabeolle img 1"
+          },
+          {
+            "src": "/images/projects/budget_problem/2-3.jpg",
+            "alt": "jabeolle img 2"
+          },
+          {
+            "src": "/images/projects/budget_problem/2-3.jpg",
+            "alt": "jabeolle img 3"
+          },
+        ]
       },
       {
         "type": "paragraph",
@@ -43,9 +65,18 @@ const projects = [
         "text": "The second challenge is fabrication. Even if models fit perfectly in 3D space, how do you actually build them in the real world? Imagine having to precisely position heavy glass panels and steel frames in mid-air and trim all overlapping parts without error. That’s an incredibly difficult task."
       },
       {
-        "type": "image",
-        "src": "/images/projects/budget_problem/project_2.png",
-        "alt": "Examples of various joint systems found online"
+        "type": "imageRow",
+        "columns": 2,
+        "images": [
+          {
+            "src": "/images/projects/budget_problem/3-1.jpg",
+            "alt": "joint examples found on internet"
+          },
+          {
+            "src": "/images/projects/budget_problem/3-2.jpg",
+            "alt": "joint examples found on internet"
+          },
+        ]
       },
       {
         "type": "paragraph",
@@ -65,9 +96,18 @@ const projects = [
         "text": "So how did Galleria Gwanggyo solve this problem?"
       },
       {
-        "type": "image",
-        "src": "/images/projects/budget_problem/project_3.png",
-        "alt": "Galleria Gwanggyo smart node with neatly aligned glass panels"
+        "type": "imageRow",
+        "columns": 2,
+        "images": [
+          {
+            "src": "/images/projects/budget_problem/4-1.jpg",
+            "alt": "Gwangyo smart node 1"
+          },
+          {
+            "src": "/images/projects/budget_problem/4-2.jpg",
+            "alt": "Gwangyo smart node 1"
+          },
+        ]
       },
       {
         "type": "image",
@@ -85,6 +125,220 @@ const projects = [
       {
         "type": "paragraph",
         "text": "What truly made this possible was the mindset that ‘nothing is fixed.’ By embracing this idea early, our team was able to create something completely new. Creativity and technical skill follow naturally from that mindset — and reinforce it, too. Thoughts like, ‘Can I try this differently?’, ‘Why was it done that way before?’, and ‘How could I overcome this?’ are what drive real growth and allow us to face the next ‘hard problem’ with confidence."
+      }
+    ]
+  },
+    {
+    "slug": "implementing-design-intent-in-baseboard",
+    "title": "[Article] Implementing Design Intent... Through a Baseboard",
+    "excerpt": "An engineer’s reflection on how even small construction details—like a baseboard—require thoughtful design to faithfully realize the original intent in real-world fabrication and installation.",
+    "hero": "/images/projects/design_intent/hero.png",
+    "heroSmall": "/images/projects/design_intent/hero.png",
+    "thumb": "/images/projects/design_intent/hero.png",
+    "content": [
+      {
+        "type": "image",
+        "src": "/images/projects/design_intent/1.jpg",
+        "alt": "Typical baseboard example"
+      },
+      {
+        "type": "paragraph",
+        "text": "For the past week, my task has been to design and engineer baseboards. Normally, this would be handled according to standard construction details, but since we’re working on a non-orthogonal system, the baseboard also had to be custom-designed."
+      },
+      {
+        "type": "imageRow",
+        "columns": 2,
+        "images": [
+          {
+            "src": "/images/projects/design_intent/2-1.png",
+            "alt": "rhino baseboard modeling 1"
+          },
+          {
+            "src": "/images/projects/design_intent/2-2.png",
+            "alt": "rhino baseboard modeling 1"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "I spent the entire week using Grasshopper to automate the modeling of every section, eventually creating a system that could control nearly 5,000 components through parameters. It almost felt like performing a magic trick. Later, this model will be automatically converted into drawings and manufactured using CNC cutting."
+      },
+      {
+        "type": "paragraph",
+        "text": "Of course, modeling wasn’t the only part of the process. Even a baseboard—seemingly minor—still involves genuine design decisions. Along the way, I encountered several moments of consideration, and in this post, I’d like to share one of them."
+      },
+      {
+        "type": "image",
+        "src": "/images/projects/design_intent/3.png",
+        "alt": "to mdel a Finished edge"
+      },
+      {
+        "type": "paragraph",
+        "text": "There was a suggestion to create a finished edge at the end of the baseboard to make installation easier for other contractors (such as the interior team). So I had to design that finishing detail."
+      },
+      {
+        "type": "imageRow",
+        "columns": 2,
+        "images": [
+          {
+            "src": "/images/projects/design_intent/4-1.png",
+            "alt": "quiz 1"
+          },
+          {
+            "src": "/images/projects/design_intent/4-2.png",
+            "alt": "quiz 2"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Quiz: Which design detail do you think is better? Option 1 uses a slide-in method, where the end cap is inserted from top to bottom like sliding a card. Option 2 covers it from front to back like fitting a lid. Initially, I proceeded with Option 1. But as soon as my team lead saw it, he said, 'That’s not going to work.' The reason was clear."
+      },
+      {
+        "type": "image",
+        "src": "/images/projects/design_intent/5.png",
+        "alt": "quiz 1 problem"
+      },
+      {
+        "type": "paragraph",
+        "text": "If Option 1 were built, there would be several issues. First, there’s no structural guarantee that the end cap would always align perfectly at the edge—it could easily slip inward, and there’d be no way to stop it. Second, the horizontal member shown in the drawing wouldn’t be fixed well, leading to sagging or construction difficulties. In short, this design was inherently unstable. Since multiple teams would be working on different sections, it would be impossible to ensure that the design intent was realized consistently across the entire project."
+      },
+      {
+        "type": "imageRow",
+        "columns": 2,
+        "images": [
+          {
+            "src": "/images/projects/design_intent/6-1.png",
+            "alt": "quiz 2 solution 1"
+          },
+          {
+            "src": "/images/projects/design_intent/6-2.png",
+            "alt": "quiz 2 solution 2"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "So, I redesigned it. I introduced a mortise-and-tenon structure at the connection points, so each part would interlock physically. With this approach, no matter who installs it or how many times, the end plate will always fit perfectly at the end of the baseboard. We concluded that this was a solid detail and finalized the design, updating the script and the model accordingly."
+      },
+      {
+        "type": "paragraph",
+        "text": "To summarize, the original design intent was simply to create a clean closure at the end of the baseboard. But to realize that intent, we had to overcome challenges in both fabrication and construction. A well-thought-out detail design reflects an awareness of possible errors in form and actively seeks shapes that eliminate them."
+      },
+      {
+        "type": "paragraph",
+        "text": "Even in a tiny element like a baseboard, this mindset—striving to ensure design intent is faithfully implemented—will ultimately determine the overall quality of the building. I’ll keep moving forward with that mindset."
+      }
+    ]
+  },
+    {
+    "slug": "design-tool-implementation",
+    "title": "[Article] Design Tool Implementation",
+    "excerpt": "An engineer’s log exploring how Grasshopper, beyond parametric modeling, can be used as a powerful design tool to visualize constraints, optimize geometry, and streamline architectural detailing.",
+    "hero": "/images/projects/design_tool/hero.png",
+    "heroSmall": "/images/projects/design_tool/hero.png",
+    "thumb": "/images/projects/design_tool/hero.png",
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Grasshopper is primarily a tool for parametric modeling, but depending on how it is used, it can go far beyond simple modeling and become an effective design tool. What does 'design tool' mean in this context?"
+      },
+      {
+        "type": "paragraph",
+        "text": "When designing a part of a building, an engineer must first identify various constraints. These can generally be categorized into three types: structural, functional, and aesthetic. The structural aspect concerns whether the element can be installed and remain stable. Technically, this means checking whether the calculated structural values fall within acceptable limits. In a broader sense, it also includes materials, construction methods, fabrication, and installation techniques that influence structural performance."
+      },
+      {
+        "type": "paragraph",
+        "text": "Function refers to the role that the element must perform within the building—for example, waterproofing, air-tightness, insulation, and soundproofing in the case of a facade. Lastly, aesthetics simply means that the element should not look unattractive."
+      },
+      {
+        "type": "paragraph",
+        "text": "An engineer must prioritize these constraints and determine the optimal result. The challenge is that constraints are interdependent and constantly changing, making it difficult to grasp their relationships in real time. In architectural design, this is further complicated by the three-dimensional nature of components, which makes numerical representation difficult."
+      },
+      {
+        "type": "paragraph",
+        "text": "This is where a design tool becomes useful—it helps visualize these constraints in 3D space, allowing engineers to interact with the model and make intuitive decisions at every step. Note that 'design tool' here is not an officially defined term."
+      },
+      {
+        "type": "paragraph",
+        "text": "This week, I created a design tool that turned out to be surprisingly effective and powerful."
+      },
+      {
+        "type": "imageRow",
+        "columns": 2,
+        "images": [
+          { "src": "/images/projects/design_tool/1-1.png", "alt": "Structure connection visualization 1" },
+          { "src": "/images/projects/design_tool/1-2.png", "alt": "Structure connection visualization 2" }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "The goal was to connect a light-blue elliptical structure to secondary members highlighted in yellow, anchored at points named P00 through P25."
+      },
+      {
+        "type": "paragraph",
+        "text": "Constraints included: points should be located near the lower support members of the ellipse; connection directions should be perpendicular to the ellipse surface; distances between points should range from 2000mm to 4000mm; and connection lengths should not exceed 1350mm."
+      },
+      {
+        "type": "paragraph",
+        "text": "Because all points are interconnected, adjusting one point to satisfy a condition can cause others to fail. This demonstrates how interdependent constraints can be. Visualizing them helps solve such problems."
+      },
+      {
+        "type": "image",
+        "src": "/images/projects/design_tool/2.png",
+        "alt": "Constraint visualization in Grasshopper"
+      },
+      {
+        "type": "paragraph",
+        "text": "In this visualization, yellow lines represent connecting members, green numbers indicate distances between points, red numbers highlight connections exceeding 1350mm, and yellow numbers mark those within the limit. Once set up, the engineer only needs to move the points to find the optimal arrangement."
+      },
+      {
+        "type": "imageRow",
+        "columns": 2,
+        "images": [
+          { "src": "/images/projects/design_tool/3-1.png", "alt": "Interactive modeling constraint 1" },
+          { "src": "/images/projects/design_tool/3-2.png", "alt": "Interactive modeling constraint 2" }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Through this visualization, most of the 26 points could be arranged using typical details, leaving only special cases for further resolution."
+      },
+      {
+        "type": "image",
+        "src": "/images/projects/design_tool/5.jpg",
+        "alt": "Detail sketches"
+      },
+      {
+        "type": "paragraph",
+        "text": "These sketches, mostly drawn by my team leader(very briefly), were reinterpreted by me to understand each connection detail. After discussing and deciding how to handle each point, modeling was done in Grasshopper to ensure flexibility if point positions later needed adjustments."
+      },
+      {
+        "type": "image",
+        "src": "/images/projects/design_tool/6.png",
+        "alt": "Overall Grasshopper script for detail modeling"
+      },
+      {
+        "type": "paragraph",
+        "text": "Although the script looks complex, it was actually neatly organized into about five detail types. Once completed, the engineer can simply modify point positions to reflect design changes."
+      },
+      {
+        "type": "image",
+        "src": "/images/projects/design_tool/7.png",
+        "alt": "Modeled connection members in Grasshopper"
+      },
+      {
+        "type": "paragraph",
+        "text": "After completing the script, modifying point positions instantly updates the entire model. This enables checking detailed issues like interference at joints or weld lengths directly in 3D."
+      },
+      {
+        "type": "image",
+        "src": "/images/projects/design_tool/8.gif",
+        "alt": "Animated visualization of Grasshopper design tool"
+      },
+      {
+        "type": "paragraph",
+        "text": "While this process can easily become more work than it’s worth, assessing the necessity beforehand is important. Of course, for those who are quick, doing all design steps this way would be ideal. Through this project, I was able to confirm the strength of Grasshopper as a design tool and plan to actively utilize it in future work."
       }
     ]
   },
