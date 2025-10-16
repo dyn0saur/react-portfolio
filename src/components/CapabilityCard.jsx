@@ -5,6 +5,7 @@ export default function CapabilityCard({ project = null }) {
 
   const {
     title = 'Untitled',
+    catchPhrase = '',
     description = '',
     imageClass = '',   // CSS로 관리하는 썸네일 클래스
     image = '',        // (호환용) 개별 이미지 경로를 쓰는 경우
@@ -23,6 +24,7 @@ export default function CapabilityCard({ project = null }) {
       )}
 
       <h3 className="capability-title">{title}</h3>
+      {catchPhrase && <p className="cap-catch">{catchPhrase}</p>}
       {description && <p className="cap-desc">{description}</p>}
 
       {Array.isArray(tech) && tech.length > 0 && (

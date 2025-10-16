@@ -1,19 +1,24 @@
 const projects = [
-  { title: 'Architectural Competence',
-    description: 'Architectural expertise applied from concept to construction.',
+  {
+    title: 'Architectural Grounding',
+    catchPhrase: 'Build with understanding.',
+    description: 'A strong architectural foundation enables clear reasoning from concept to construction — solving spatial and technical challenges through design thinking.',
     imageClass: "cap-1",
-    tech: ['Collaboration','Technical Proficiency', 'Design Coordination']
+    tech: ['Concept-to-Build','Architectural Logic', 'Design Coordination']
   },
-  { 
-  title: 'Engineering Experience',
-  description: 'From detailed drawings to precise, fabrication-ready solutions.',
-  imageClass: "cap-2",
-  tech: ['BIM Integration','Construction Detailing','Digital Fabrication'] 
+  {
+    title: 'Engineering Integration',
+    catchPhrase: 'Build through precision.',
+    description: 'Engineering insight bridges the gap between design and fabrication — integrating details that make construction both accurate and achievable.',
+    imageClass: "cap-2",
+    tech: ['BIM Integration','Constructability','Digital Fabrication']
   },
-  { title: 'Rhino + Grasshopper',
-    description: '3D parametric design tool for complex forms and efficient automation.',
+  {
+    title: 'Computational Craft',
+    catchPhrase: 'Build before it’s built.',
+    description: 'By simulating complex geometries and fabrication processes, computation allows problems to be built — and solved — before they exist on site.',
     imageClass: "cap-3",
-    tech: ['Digital Forming','Data-Driven Modeling', 'Model-to-Fabrication Automation']
-}
+    tech: ['Parametric Modeling','Data-Driven Modeling', 'Model-to-Fabrication']
+  }
 ];
 export default projects;

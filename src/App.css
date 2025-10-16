@@ -42,7 +42,6 @@ a{color:var(--link);text-decoration-color:var(--link);text-underline-offset:3px}
 
 .landing-role{
   font-weight:700;
-  text-transform:uppercase;
 }
 
 .landing-name{
@@ -183,6 +182,12 @@ u {
 }
 
 /* 텍스트·태그 정리 */
+.cap-card .cap-catch {
+  margin: 4px 0 8px;
+  font-weight: 600;
+  color: var(--primary);
+  letter-spacing: 0.01em;
+}
 .cap-card .cap-desc { opacity: .85; }
 .cap-card .cap-tags { display: flex; flex-wrap: wrap; gap: 8px; }
 .cap-card .cap-link { margin-top: 12px; }
