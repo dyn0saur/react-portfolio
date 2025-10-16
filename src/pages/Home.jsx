@@ -13,7 +13,7 @@ export default function Home(){
             <span>I build before it’s built.</span>
           </p>
           <p className="landing-name">
-            Welcome, I'm <strong>Geonju Kim</strong>
+            Welcome, I'm <strong>Geonju Kim.</strong>
           </p>
         </div>
         <nav className="page-links" aria-label="Navigate to site sections">
