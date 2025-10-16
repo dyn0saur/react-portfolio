@@ -1,5 +1,6 @@
 import React from "react";
 import ProjectsList from "../components/ProjectsList";
+import PageLinksNav from "../components/PageLinksNav";
 
 function updateHash(hash) {
   if (history?.pushState) history.pushState(null, "", hash);
@@ -17,17 +18,7 @@ export default function Projects({ page = 1 }){
     <div className="App projects-page">
       <ProjectsList page={page} onPageChange={handlePageChange} />
       <div className="container projects-page__nav">
-        <nav className="page-links" aria-label="Navigate to other sections">
-          <a href="#/">Intro</a>
-          <a href="#/core">Expertises</a>
-          <a
-            href="https://docs.google.com/document/d/1EsvKRr3TMLbSUXY82zXz7-LRdAI9_UsiyEUioZhTVUU/edit?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Resume
-          </a>
-        </nav>
+        <PageLinksNav active="projects" ariaLabel="Navigate to other sections" />
       </div>
     </div>
   );

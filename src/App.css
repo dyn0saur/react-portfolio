@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Castoro:ital,wght@0,400;1,400&family=DM+Sans:wght@900&display=swap');
-:root{--bg:#181617;--fg:#edece4;--muted:#cfcac2;--primary:#edece4;--accent:#fee032;--link:#ff4945;--landing-letter-spacing:0.05em;
+:root{--bg:#181617;--fg:#edece4;--muted:#cfcac2;--primary:#edece4;--accent:#fee032;--link:#edece4;--landing-letter-spacing:0.05em;
 --radius:16px;--s1:0px;--s2:12px;--s3:16px;--s4:24px;--s5:32px;--s6:48px;--fs-m:16px;}
 
 html,body,#root{height:100%;margin:0;background:var(--bg);color:var(--fg);font-family:"Castoro",serif;font-size:var(--fs-m)}
@@ -62,6 +62,18 @@ a{color:var(--link);text-decoration-color:var(--link);text-underline-offset:3px}
 
 .page-links a{
   font-size:1.125rem;
+  font-weight:500;
+  text-decoration:none;
+}
+
+.page-links a:hover{
+  text-decoration:underline;
+}
+
+.page-links a[aria-current="page"]{
+  color:var(--accent);
+  font-weight:700;
+  text-decoration:underline;
 }
 
 .core-page__content{
@@ -101,7 +113,7 @@ a{color:var(--link);text-decoration-color:var(--link);text-underline-offset:3px}
 .projects-pagination a[aria-current="page"]{
   color:var(--accent);
   font-weight:700;
-  text-decoration:none;
+  text-decoration:underline;
 }
 
 

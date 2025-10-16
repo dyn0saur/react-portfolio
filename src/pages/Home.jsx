@@ -1,5 +1,6 @@
 // src/pages/Home.jsx
 import React from "react";
+import PageLinksNav from "../components/PageLinksNav";
 
 export default function Home(){
   return (
@@ -16,17 +17,7 @@ export default function Home(){
             Welcome, I'm <strong>Geonju Kim.</strong>
           </p>
         </div>
-        <nav className="page-links" aria-label="Navigate to site sections">
-          <a href="#/core">Expertises</a>
-          <a href="#/projects">Works</a>
-          <a
-            href="https://docs.google.com/document/d/1EsvKRr3TMLbSUXY82zXz7-LRdAI9_UsiyEUioZhTVUU/edit?usp=sharing"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Resume
-          </a>
-        </nav>
+        <PageLinksNav active="intro" ariaLabel="Navigate to site sections" />
       </section>
     </div>
   );

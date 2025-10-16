@@ -8,7 +8,7 @@ const projects = [
   },
   {
     title: 'Engineering Integration',
-    catchPhrase: 'Build through knowledge.',
+    catchPhrase: 'Build through expertise.',
     description: 'Engineering expertise connects design with fabrication — turning intent into precise, buildable solutions through technical insight and material understanding.',
     imageClass: "cap-2",
     tech: ['BIM Integration','Constructability','Digital Fabrication']

@@ -1,8 +1,17 @@
 // src/projects/Template.jsx
-import React from "react";
+import React, { useCallback } from "react";
 import LightboxImage from "../components/LightboxImage";
+import PageLinksNav from "../components/PageLinksNav";
 
 export default function Template({ title, category, date, hero, heroThumb, children }) {
+  const handleBackClick = useCallback((event) => {
+    if (typeof window === "undefined") return;
+    if (window.history.length > 1) {
+      event.preventDefault();
+      window.history.back();
+    }
+  }, []);
+
   return (
     <article className="container section project-detail">
       {hero && (
@@ -30,8 +39,9 @@ export default function Template({ title, category, date, hero, heroThumb, child
       <div className="project-content">
         {children}
       </div>
+      <PageLinksNav active="projects" ariaLabel="Navigate to other sections" className="project-detail__page-links" />
       <p style={{ marginTop: 24 }}>
-        <a href="#/">← Back to home</a>
+        <a href="#/projects" onClick={handleBackClick}>Back</a>
       </p>
     </article>
   );

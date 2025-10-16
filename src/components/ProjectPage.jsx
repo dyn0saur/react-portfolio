@@ -292,7 +292,7 @@ export default function ProjectPage({ slug }) {
   useEffect(() => {
     window.scrollTo(0, 0); // 페이지 로드 시 스크롤 맨 위로 이동
   }, []);
-  
+
   const project = projectIndex[slug];
   if (!project) {
     return (
