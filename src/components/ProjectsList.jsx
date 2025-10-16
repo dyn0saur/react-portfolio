@@ -40,7 +40,7 @@ export default function ProjectsList({ page = 1, pageSize = 5, onPageChange }) {
 
   return (
     <section className="container section projects-list-section" aria-labelledby="projects">
-      <h2 id="projects">What I've done & written..</h2>
+      <h2 id="projects">Works</h2>
       <div className="projects-list">
         {visible.map((p) => (
           <article className="project-row" key={p.slug}>

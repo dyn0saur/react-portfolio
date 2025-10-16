@@ -17,7 +17,7 @@ export default function Home(){
           </p>
         </div>
         <nav className="page-links" aria-label="Navigate to site sections">
-          <a href="#/core">Expertise</a>
+          <a href="#/core">Expertises</a>
           <a href="#/projects">Works</a>
           <a
             href="https://docs.google.com/document/d/1EsvKRr3TMLbSUXY82zXz7-LRdAI9_UsiyEUioZhTVUU/edit?usp=sharing"

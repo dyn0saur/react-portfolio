@@ -23,7 +23,7 @@ export default function Capabilities() {
 
   return (
     <section id="core-panel" className="container section" aria-labelledby="core">
-      <h2 id="core">What I bring to the table..</h2>
+      <h2 id="core">Expertises</h2>
       <div className="grid">
         {list.map((p, i) => (
           <CapabilityCard key={p.title ? `${p.title}-${i}` : i} project={p} />

@@ -19,7 +19,7 @@ export default function Projects({ page = 1 }){
       <div className="container projects-page__nav">
         <nav className="page-links" aria-label="Navigate to other sections">
           <a href="#/">Intro</a>
-          <a href="#/core">Expertise</a>
+          <a href="#/core">Expertises</a>
           <a
             href="https://docs.google.com/document/d/1EsvKRr3TMLbSUXY82zXz7-LRdAI9_UsiyEUioZhTVUU/edit?usp=sharing"
             target="_blank"
