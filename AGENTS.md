@@ -25,3 +25,9 @@ Place high-resolution images under `public/images/` and store thumbnails alongsi
 - Standalone project images are centered automatically; only set explicit margins when overriding the default `margin: 16px auto`.
 - `imageRow` blocks auto-scale images to share a common height, keeping vertical shots capped at `0.715 × window height` while preserving aspect ratios. Avoid hard-coding widths/heights in project data; use optional `style` props sparingly.
 - Rows should include the minimum images needed; the layout will center them and add mobile gutters automatically.
+
+## Navigation & Routing Snapshot
+- Landing page (`#/` or empty hash) now renders a three-line intro stack inside `landing-copy`, followed by links labeled `Expertise`, `Works`, and external `Resume`.
+- Core page (`#/core`) centers the capabilities panel and mirrors the footer links: `Intro`, `Works`, `Resume`.
+- Projects index (`#/projects`) paginates five projects per page, appends `?page=N` for pagination, and surfaces footer links `Intro`, `Expertise`, `Resume`.
+- Project detail remains routed via `#/projects/:slug`. Hash parsing lives in `src/Router.jsx`.
