@@ -8,8 +8,8 @@ const projects = [
   },
   {
     title: 'Engineering Integration',
-    catchPhrase: 'Build through precision.',
-    description: 'Engineering insight bridges the gap between design and fabrication — integrating details that make construction both accurate and achievable.',
+    catchPhrase: 'Build through knowledge.',
+    description: 'Engineering expertise connects design with fabrication — turning intent into precise, buildable solutions through technical insight and material understanding.',
     imageClass: "cap-2",
     tech: ['BIM Integration','Constructability','Digital Fabrication']
   },
