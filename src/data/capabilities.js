@@ -12,7 +12,7 @@ const projects = [
     imageClass: "cap-2"
   },
   {
-    title: 'Computational Craft',
+    title: 'Computational Methodology',
     catchPhrase: 'Build before it’s built.',
     description: 'By simulating complex geometries and fabrication processes, computation allows problems to be built — and solved — before they exist on site.',
     imageClass: "cap-3"

@@ -1,9 +1,9 @@
 const project = {
   slug: "detail_drawing",
-  title: "What I Learned from Detail Design",
+  title: "What I Learned from My First Detail Design",
   category: "Article",
   date: "2025/02/18",
-  excerpt: "A reflection on the intricate process of detail design — bridging fabrication and installation through endless problem-solving.",
+  excerpt: "A reflection on the intricate process of my first detail design — bridging fabrication and installation through endless problem-solving.",
   hero: "/images/projects/detail_drawing/hero.jpg",
   heroSmall: "/images/projects/detail_drawing/hero.jpg",
   thumb: "/images/projects/detail_drawing/hero.jpg",

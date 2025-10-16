@@ -41,7 +41,7 @@ export default function Template({ title, category, date, hero, heroThumb, child
       </div>
       <PageLinksNav active="projects" ariaLabel="Navigate to other sections" className="project-detail__page-links" />
       <p style={{ marginTop: 24 }}>
-        <a href="#/projects" onClick={handleBackClick}>Back</a>
+        <a href="#/projects" onClick={handleBackClick}>Back to Work ...s</a>
       </p>
     </article>
   );

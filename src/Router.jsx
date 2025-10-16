@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Home from "./pages/Home";
 import Core from "./pages/Core";
+import Philosophy from "./pages/Philosophy";
 import Projects from "./pages/Projects";
 import ProjectPage from "./components/ProjectPage";
 
@@ -35,6 +36,10 @@ export function parseHash() {
     return { route: "project", slug: segments.slice(1).join("/") };
   }
 
+  if (segments[0] === "philosophy") {
+    return { route: "philosophy" };
+  }
+
   if (segments[0] === "core") {
     return { route: "core" };
   }
@@ -56,6 +61,7 @@ export default function Router(){
   }, []);
 
   if (state.route === "project") return <ProjectPage slug={state.slug} />;
+  if (state.route === "philosophy") return <Philosophy />;
   if (state.route === "core") return <Core />;
   if (state.route === "projects") return <Projects page={state.page} />;
   return <Home />;

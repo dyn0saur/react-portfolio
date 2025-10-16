@@ -17,7 +17,7 @@ export default function Home(){
             Welcome, I'm <strong>Geonju Kim.</strong>
           </p>
         </div>
-        <PageLinksNav active="intro" ariaLabel="Navigate to site sections" />
+        <PageLinksNav active="intro" ariaLabel="Navigate to site sections" offset="-1.00rem" />
       </section>
     </div>
   );
