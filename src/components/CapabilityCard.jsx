@@ -10,7 +10,6 @@ export default function CapabilityCard({ project = null }) {
     imageClass = '',   // CSS로 관리하는 썸네일 클래스
     image = '',        // (호환용) 개별 이미지 경로를 쓰는 경우
     url = '',          // (선택) 외부 링크가 있는 경우
-    tech = [],
   } = project;
 
   return (
@@ -26,14 +25,6 @@ export default function CapabilityCard({ project = null }) {
       <h3 className="capability-title">{title}</h3>
       {catchPhrase && <p className="cap-catch">{catchPhrase}</p>}
       {description && <p className="cap-desc">{description}</p>}
-
-      {Array.isArray(tech) && tech.length > 0 && (
-        <div className="cap-tags">
-          {tech.map((t, i) => (
-            <span key={`${t}-${i}`} className="badge badge-tech">{t}</span>
-          ))}
-        </div>
-      )}
 
       {url && (
         <p className="cap-link">

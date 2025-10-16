@@ -58,6 +58,7 @@ a{color:var(--link);text-decoration-color:var(--link);text-underline-offset:3px}
   justify-content:center;
   gap:var(--s3);
   flex-wrap:wrap;
+  margin-top:var(--s4);
 }
 
 .page-links a{
@@ -108,6 +109,7 @@ a{color:var(--link);text-decoration-color:var(--link);text-underline-offset:3px}
 
 .projects-pagination a{
   font-weight:500;
+  text-decoration:none;
 }
 
 .projects-pagination a[aria-current="page"]{
@@ -155,8 +157,6 @@ h3 {
   .card-col-4{grid-column:1 / -1 !important}
 }
 
-.badge-tech{font-size:10px;padding:2px 6px}
-
 .section{padding:clamp(24px,12vh,20px) 0}
 
 .capability-title {
@@ -193,7 +193,7 @@ u {
   background-color: #222;     /* 이미지 없을 때 배경 */
 }
 
-/* 텍스트·태그 정리 */
+/* 텍스트 정리 */
 .cap-card .cap-catch {
   margin: 4px 0 8px;
   font-weight: 600;
@@ -201,7 +201,6 @@ u {
   letter-spacing: 0.01em;
 }
 .cap-card .cap-desc { opacity: .85; }
-.cap-card .cap-tags { display: flex; flex-wrap: wrap; gap: 8px; }
 .cap-card .cap-link { margin-top: 12px; }
 /* Lightbox styles */
 .lightbox {
