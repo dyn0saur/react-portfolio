@@ -8,12 +8,12 @@ export default function Home(){
         <div className="landing-copy">
           <p className="landing-intro">
             <span>
-              I'm <strong className="landing-role">Computational Builder</strong>
+              As a Computational Builder,
             </span>
             <span>I build before it’s built.</span>
           </p>
           <p className="landing-name">
-            I'm <strong>Geonju Kim</strong>
+            Welcome, I'm <strong>Geonju Kim</strong>
           </p>
         </div>
         <nav className="page-links" aria-label="Navigate to site sections">
