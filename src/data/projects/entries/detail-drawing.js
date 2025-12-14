@@ -6,7 +6,7 @@ const project = {
   excerpt: "A reflection on the intricate process of my first detail design — bridging fabrication and installation through endless problem-solving.",
   hero: "/images/projects/detail_drawing/hero.jpg",
   heroSmall: "/images/projects/detail_drawing/hero.jpg",
-  thumb: "/images/projects/detail_drawing/hero.jpg",
+  thumb: "/images/projects/detail_drawing/thumbnail.jpg",
   content: [
     {
       type: "image",

@@ -7,7 +7,7 @@ const project = {
   excerpt: "Urban-regeneration proposal for Donui-dong’s jjokbangchon that preserves the ground-level alley texture as exhibition/retail, caps it with a structural pedestrian deck as shared open space, and adds compliant one-person housing above—supplemented by lifestyle lodging to make participation economically viable.",
   hero: "/images/projects/jungle/hero.png",
   heroSmall: "/images/projects/jungle/hero.png",
-  thumb: "/images/projects/jungle/hero.png",
+  thumb: "/images/projects/jungle/thumbnail.png",
   content: [
     {
       type: "paragraph",

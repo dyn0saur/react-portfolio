@@ -7,7 +7,7 @@ const project = {
   excerpt: "An engineer’s log exploring how Grasshopper, beyond parametric modeling, can be used as a powerful design tool to visualize constraints, optimize geometry, and streamline architectural detailing.",
   hero: "/images/projects/design_tool/hero.png",
   heroSmall: "/images/projects/design_tool/hero.png",
-  thumb: "/images/projects/design_tool/hero.png",
+  thumb: "/images/projects/design_tool/thumbnail.png",
   content: [
     {
       type: "paragraph",

@@ -7,7 +7,7 @@ const project = {
   excerpt: "Urban-regeneration strategy for Jongno’s historic Pimatgol that restores a human-scale, walkable alley and populates it with makers from the nearby Sewoon/Euljiro ecosystem—supported by a modular, parametric facade system that delivers shading and identity.",
   hero: "/images/projects/thesis/hero.png",
   heroSmall: "/images/projects/thesis/hero.png",
-  thumb: "/images/projects/thesis/hero.png",
+  thumb: "/images/projects/thesis/thumbnail.png",
   content: [
     {
       type: "paragraph",

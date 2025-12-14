@@ -5,7 +5,7 @@ const project = {
   category: "Article",
   date: "2025/09/22",
   excerpt: "A reflection on architectural detailing challenges observed in the gridshell structures of Galleria Gwanggyo and Ttukseom Jabeolle, exploring how complex design problems are solved through creativity and engineering insight.",
-  hero: "/images/projects/budget_problem/hero.png",
+  hero: "/images/projects/budget_problem/thumbnail.jpg",
   content: [
     {
       type: "imageRow",

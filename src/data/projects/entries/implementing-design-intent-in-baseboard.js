@@ -7,7 +7,7 @@ const project = {
   excerpt: "An engineer’s reflection on how even small construction details—like a baseboard—require thoughtful design to faithfully realize the original intent in real-world fabrication and installation.",
   hero: "/images/projects/design_intent/hero.png",
   heroSmall: "/images/projects/design_intent/hero.png",
-  thumb: "/images/projects/design_intent/hero.png",
+  thumb: "/images/projects/design_intent/thumbnail.png",
   content: [
     {
       type: "image",
