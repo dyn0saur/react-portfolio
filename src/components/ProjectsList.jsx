@@ -1,10 +1,63 @@
 // src/components/ProjectsList.jsx
-import React from "react";
+import React, { useState } from "react";
 import projects from "../data/projects";
 import { deriveThumbSrc } from "./LightboxImage";
 
 function getProjectThumb(project) {
   return project.listThumb || project.thumb || deriveThumbSrc(project.hero) || project.hero;
+}
+
+function getProjectThumbPlaceholder(project) {
+  // 저해상도 썸네일 경로 생성 (이미 .thumb 확장자가 있으면 그대로 사용, 없으면 추가)
+  const fullThumb = getProjectThumb(project);
+  if (!fullThumb) return null;
+  
+  // 이미 .thumb가 포함되어 있으면 그대로 사용
+  if (fullThumb.includes('.thumb.')) return fullThumb;
+  
+  // .thumb 확장자 추가
+  return deriveThumbSrc(fullThumb) || fullThumb;
+}
+
+function ProjectThumbnail({ project }) {
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const fullImageSrc = getProjectThumb(project);
+  const placeholderSrc = getProjectThumbPlaceholder(project);
+  const displayPlaceholder = placeholderSrc && placeholderSrc !== fullImageSrc;
+
+  const handleImageLoad = () => {
+    setImageLoaded(true);
+  };
+
+  const handleImageError = (event) => {
+    if (event.currentTarget.src !== project.hero) {
+      event.currentTarget.src = project.hero;
+    }
+  };
+
+  return (
+    <div className="project-thumb-wrapper">
+      {displayPlaceholder && (
+        <img
+          src={placeholderSrc}
+          alt=""
+          className="project-thumb-placeholder"
+          aria-hidden="true"
+          onError={(e) => {
+            e.currentTarget.style.display = 'none';
+          }}
+        />
+      )}
+      <img
+        src={fullImageSrc}
+        alt={project.title}
+        className={`project-thumb-full ${imageLoaded ? 'loaded' : ''}`}
+        loading="lazy"
+        onLoad={handleImageLoad}
+        onError={handleImageError}
+      />
+    </div>
+  );
 }
 
 function updateHash(hash) {
@@ -45,16 +98,7 @@ export default function ProjectsList({ page = 1, pageSize = 5, onPageChange }) {
         {visible.map((p) => (
           <article className="project-row" key={p.slug}>
             <a href={`#/projects/${p.slug}`} onClick={(e) => go(p.slug, e)} className="project-thumb">
-              <img
-                src={getProjectThumb(p)}
-                alt={p.title}
-                loading="lazy"
-                onError={(event) => {
-                  if (event.currentTarget.src !== p.hero) {
-                    event.currentTarget.src = p.hero;
-                  }
-                }}
-              />
+              <ProjectThumbnail project={p} />
             </a>
             <div className="project-body">
               <h3 className="project-title">
