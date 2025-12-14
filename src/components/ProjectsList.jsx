@@ -1,5 +1,5 @@
 // src/components/ProjectsList.jsx
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import projects from "../data/projects";
 import { deriveThumbSrc } from "./LightboxImage";
 
@@ -21,9 +21,21 @@ function getProjectThumbPlaceholder(project) {
 
 function ProjectThumbnail({ project }) {
   const [imageLoaded, setImageLoaded] = useState(false);
+  const imgRef = useRef(null);
   const fullImageSrc = getProjectThumb(project);
   const placeholderSrc = getProjectThumbPlaceholder(project);
   const displayPlaceholder = placeholderSrc && placeholderSrc !== fullImageSrc;
+
+  // 이미지가 이미 로드되어 있는지 확인 (캐시된 경우)
+  useEffect(() => {
+    const img = imgRef.current;
+    if (!img) return;
+    
+    // 이미지가 완전히 로드되어 있으면 즉시 블러 제거
+    if (img.complete && img.naturalWidth > 0) {
+      setImageLoaded(true);
+    }
+  }, [fullImageSrc]);
 
   const handleImageLoad = () => {
     setImageLoaded(true);
@@ -32,6 +44,8 @@ function ProjectThumbnail({ project }) {
   const handleImageError = (event) => {
     if (event.currentTarget.src !== project.hero) {
       event.currentTarget.src = project.hero;
+    } else {
+      setImageLoaded(true);
     }
   };
 
@@ -49,6 +63,7 @@ function ProjectThumbnail({ project }) {
         />
       )}
       <img
+        ref={imgRef}
         src={fullImageSrc}
         alt={project.title}
         className={`project-thumb-full ${imageLoaded ? 'loaded' : ''}`}

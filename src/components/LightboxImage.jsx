@@ -1,4 +1,4 @@
-import React, { forwardRef, useMemo, useState } from "react";
+import React, { forwardRef, useMemo, useState, useEffect, useRef } from "react";
 
 export function deriveThumbSrc(source) {
   if (!source) return null;
@@ -17,10 +17,26 @@ export function deriveThumbSrc(source) {
 const LightboxImage = forwardRef(function LightboxImage({ src, thumb, alt = "", className = "", style = {}, ...props }, ref) {
   const [open, setOpen] = useState(false);
   const [fallback, setFallback] = useState(false);
-  const displaySrc = useMemo(() => {
-    if (fallback) return src;
-    return thumb || deriveThumbSrc(src) || src;
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const imgRef = useRef(null);
+  const combinedRef = useRef(null);
+  
+  // ref 병합
+  useEffect(() => {
+    if (typeof ref === 'function') {
+      ref(combinedRef.current);
+    } else if (ref) {
+      ref.current = combinedRef.current;
+    }
+  }, [ref]);
+  
+  const fullImageSrc = src;
+  const placeholderSrc = useMemo(() => {
+    if (fallback) return null;
+    return thumb || deriveThumbSrc(src);
   }, [fallback, src, thumb]);
+  
+  const displayPlaceholder = placeholderSrc && placeholderSrc !== fullImageSrc;
 
   const composedStyle = useMemo(() => {
     const hasExplicitWidth = style && (style.width || style.minWidth || style.maxWidth);
@@ -33,19 +49,68 @@ const LightboxImage = forwardRef(function LightboxImage({ src, thumb, alt = "", 
     };
   }, [style]);
 
+  // 이미지가 이미 로드되어 있는지 확인 (캐시된 경우)
+  useEffect(() => {
+    const img = imgRef.current;
+    if (!img) return;
+    
+    // 이미지가 완전히 로드되어 있으면 즉시 블러 제거
+    if (img.complete && img.naturalWidth > 0) {
+      setImageLoaded(true);
+    }
+  }, [fullImageSrc]);
+
+  const handleImageLoad = (event) => {
+    setImageLoaded(true);
+    // 외부에서 전달된 onLoad 핸들러도 호출
+    if (props.onLoad) {
+      props.onLoad(event);
+    }
+  };
+
+  const handleImageError = (event) => {
+    setFallback(true);
+    setImageLoaded(true);
+    // 외부에서 전달된 onError 핸들러도 호출
+    if (props.onError) {
+      props.onError(event);
+    }
+  };
+
+  // onLoad와 onError를 props에서 제외
+  const { onLoad, onError, ...restProps } = props;
+
   return (
     <>
-      <img
-        src={displaySrc}
-        alt={alt}
-        className={className}
-        style={composedStyle}
-        loading="lazy"
-        onClick={() => setOpen(true)}
-        onError={() => setFallback(true)}
-        ref={ref}
-        {...props}
-      />
+      <div className="lightbox-image-wrapper">
+        {displayPlaceholder && (
+          <img
+            src={placeholderSrc}
+            alt=""
+            className="lightbox-image-placeholder"
+            aria-hidden="true"
+            style={composedStyle}
+            onError={(e) => {
+              e.currentTarget.style.display = 'none';
+            }}
+          />
+        )}
+        <img
+          ref={(node) => {
+            imgRef.current = node;
+            combinedRef.current = node;
+          }}
+          src={fullImageSrc}
+          alt={alt}
+          className={`lightbox-image-full ${imageLoaded ? 'loaded' : ''} ${className}`}
+          style={composedStyle}
+          loading="lazy"
+          onClick={() => setOpen(true)}
+          onLoad={handleImageLoad}
+          onError={handleImageError}
+          {...restProps}
+        />
+      </div>
       {open && (
         <div className="lightbox" onClick={() => setOpen(false)}>
           <button
