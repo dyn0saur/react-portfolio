@@ -7,7 +7,9 @@ const project = {
   excerpt: "Urban-regeneration strategy for Jongno’s historic Pimatgol that restores a human-scale, walkable alley and populates it with makers from the nearby Sewoon/Euljiro ecosystem—supported by a modular, parametric facade system that delivers shading and identity.",
   hero: "/images/projects/thesis/hero.png",
   heroSmall: "/images/projects/thesis/hero.png",
+  heroThumb: "/images/projects/thesis/hero.thumb.png",
   thumb: "/images/projects/thesis/thumbnail.png",
+  thumbPlaceholder: "/images/projects/thesis/thumbnail.thumb.png",
   content: [
     {
       type: "paragraph",
@@ -17,6 +19,7 @@ const project = {
       type: "image",
       src: "/images/projects/thesis/thesis_1.png",
       alt: "Pimatgol project image 1",
+      placeholder: "/images/projects/thesis/thesis_1.thumb.png",
     },
     {
       type: "paragraph",
@@ -26,6 +29,7 @@ const project = {
       type: "image",
       src: "/images/projects/thesis/thesis_2.png",
       alt: "Pimatgol project image 2",
+      placeholder: "/images/projects/thesis/thesis_2.thumb.png",
     },
     {
       type: "paragraph",
@@ -35,6 +39,7 @@ const project = {
       type: "image",
       src: "/images/projects/thesis/thesis_3.png",
       alt: "Pimatgol project image 3",
+      placeholder: "/images/projects/thesis/thesis_3.thumb.png",
     },
     {
       type: "paragraph",
@@ -44,6 +49,7 @@ const project = {
       type: "image",
       src: "/images/projects/thesis/thesis_4.png",
       alt: "Pimatgol project image 4",
+      placeholder: "/images/projects/thesis/thesis_4.thumb.png",
     },
     {
       type: "paragraph",
@@ -53,6 +59,7 @@ const project = {
       type: "image",
       src: "/images/projects/thesis/thesis_5.png",
       alt: "Pimatgol project image 5",
+      placeholder: "/images/projects/thesis/thesis_5.thumb.png",
     },
     {
       type: "paragraph",
@@ -62,6 +69,7 @@ const project = {
       type: "image",
       src: "/images/projects/thesis/thesis_6.png",
       alt: "Pimatgol project image 6",
+      placeholder: "/images/projects/thesis/thesis_6.thumb.png",
     },
   ],
 };

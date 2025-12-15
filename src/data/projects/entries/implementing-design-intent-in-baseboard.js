@@ -7,12 +7,15 @@ const project = {
   excerpt: "An engineer’s reflection on how even small construction details—like a baseboard—require thoughtful design to faithfully realize the original intent in real-world fabrication and installation.",
   hero: "/images/projects/design_intent/hero.png",
   heroSmall: "/images/projects/design_intent/hero.png",
+  heroThumb: "/images/projects/design_intent/hero.thumb.png",
   thumb: "/images/projects/design_intent/thumbnail.png",
+  thumbPlaceholder: "/images/projects/design_intent/thumbnail.thumb.png",
   content: [
     {
       type: "image",
       src: "/images/projects/design_intent/1.jpg",
       alt: "Typical baseboard example",
+      placeholder: "/images/projects/design_intent/1.thumb.jpg",
     },
     {
       type: "paragraph",
@@ -25,10 +28,12 @@ const project = {
         {
           src: "/images/projects/design_intent/2-1.png",
           alt: "rhino baseboard modeling 1",
+          placeholder: "/images/projects/design_intent/2-1.thumb.png",
         },
         {
           src: "/images/projects/design_intent/2-2.png",
           alt: "rhino baseboard modeling 1",
+          placeholder: "/images/projects/design_intent/2-2.thumb.png",
         },
       ],
     },
@@ -44,6 +49,7 @@ const project = {
       type: "image",
       src: "/images/projects/design_intent/3.png",
       alt: "to mdel a Finished edge",
+      placeholder: "/images/projects/design_intent/3.thumb.png",
     },
     {
       type: "paragraph",
@@ -56,10 +62,12 @@ const project = {
         {
           src: "/images/projects/design_intent/4-1.png",
           alt: "quiz 1",
+          placeholder: "/images/projects/design_intent/4-1.thumb.png",
         },
         {
           src: "/images/projects/design_intent/4-2.png",
           alt: "quiz 2",
+          placeholder: "/images/projects/design_intent/4-2.thumb.png",
         },
       ],
     },
@@ -71,6 +79,7 @@ const project = {
       type: "image",
       src: "/images/projects/design_intent/5.png",
       alt: "quiz 1 problem",
+      placeholder: "/images/projects/design_intent/5.thumb.png",
     },
     {
       type: "paragraph",
@@ -83,10 +92,12 @@ const project = {
         {
           src: "/images/projects/design_intent/6-1.png",
           alt: "quiz 2 solution 1",
+          placeholder: "/images/projects/design_intent/6-1.thumb.png",
         },
         {
           src: "/images/projects/design_intent/6-2.png",
           alt: "quiz 2 solution 2",
+          placeholder: "/images/projects/design_intent/6-2.thumb.png",
         },
       ],
     },

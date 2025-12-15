@@ -6,6 +6,7 @@ const project = {
   date: "2025/09/22",
   excerpt: "A reflection on architectural detailing challenges observed in the gridshell structures of Galleria Gwanggyo and Ttukseom Jabeolle, exploring how complex design problems are solved through creativity and engineering insight.",
   hero: "/images/projects/budget_problem/thumbnail.jpg",
+  heroThumb: "/images/projects/budget_problem/thumbnail.thumb.jpg",
   content: [
     {
       type: "imageRow",
@@ -14,10 +15,12 @@ const project = {
         {
           src: "/images/projects/budget_problem/1-1.jpg",
           alt: "Galleria Gwanggyo (Left)",
+          placeholder: "/images/projects/budget_problem/1-1.thumb.jpg",
         },
         {
           src: "/images/projects/budget_problem/1-2.jpg",
           alt: "Ttukseom Jabeolle (right)",
+          placeholder: "/images/projects/budget_problem/1-2.thumb.jpg",
         },
       ],
     },
@@ -32,14 +35,17 @@ const project = {
         {
           src: "/images/projects/budget_problem/2-1.jpg",
           alt: "jabeolle img 1",
+          placeholder: "/images/projects/budget_problem/2-1.thumb.jpg",
         },
         {
           src: "/images/projects/budget_problem/2-3.jpg",
           alt: "jabeolle img 2",
+          placeholder: "/images/projects/budget_problem/2-3.thumb.jpg",
         },
         {
           src: "/images/projects/budget_problem/2-3.jpg",
           alt: "jabeolle img 3",
+          placeholder: "/images/projects/budget_problem/2-3.thumb.jpg",
         },
       ],
     },
@@ -51,6 +57,7 @@ const project = {
       type: "image",
       src: "/images/projects/budget_problem/project_2_1.png",
       alt: "Figure 12.",
+      placeholder: "/images/projects/budget_problem/project_2_1.thumb.png",
     },
     {
       type: "paragraph",
@@ -60,6 +67,7 @@ const project = {
       type: "image",
       src: "/images/projects/budget_problem/project_2_2.png",
       alt: "Figure 5.",
+      placeholder: "/images/projects/budget_problem/project_2_2.thumb.png",
     },
     {
       type: "paragraph",
@@ -72,10 +80,12 @@ const project = {
         {
           src: "/images/projects/budget_problem/3-1.jpg",
           alt: "joint examples found on internet",
+          placeholder: "/images/projects/budget_problem/3-1.thumb.jpg",
         },
         {
           src: "/images/projects/budget_problem/3-2.jpg",
           alt: "joint examples found on internet",
+          placeholder: "/images/projects/budget_problem/3-2.thumb.jpg",
         },
       ],
     },
@@ -87,6 +97,7 @@ const project = {
       type: "image",
       src: "/images/projects/budget_problem/project_2_3.png",
       alt: "DOF",
+      placeholder: "/images/projects/budget_problem/project_2_3.thumb.png",
     },
     {
       type: "paragraph",
@@ -103,10 +114,12 @@ const project = {
         {
           src: "/images/projects/budget_problem/4-1.jpg",
           alt: "Gwangyo smart node 1",
+          placeholder: "/images/projects/budget_problem/4-1.thumb.jpg",
         },
         {
           src: "/images/projects/budget_problem/4-2.jpg",
           alt: "Gwangyo smart node 1",
+          placeholder: "/images/projects/budget_problem/4-2.thumb.jpg",
         },
       ],
     },
@@ -114,6 +127,7 @@ const project = {
       type: "image",
       src: "/images/projects/budget_problem/project_3_1.png",
       alt: "smart node diagram",
+      placeholder: "/images/projects/budget_problem/project_3_1.thumb.png",
     },
     {
       type: "paragraph",

@@ -7,7 +7,9 @@ const project = {
   excerpt: "An engineer’s log exploring how Grasshopper, beyond parametric modeling, can be used as a powerful design tool to visualize constraints, optimize geometry, and streamline architectural detailing.",
   hero: "/images/projects/design_tool/hero.png",
   heroSmall: "/images/projects/design_tool/hero.png",
+  heroThumb: "/images/projects/design_tool/hero.thumb.png",
   thumb: "/images/projects/design_tool/thumbnail.png",
+  thumbPlaceholder: "/images/projects/design_tool/thumbnail.thumb.png",
   content: [
     {
       type: "paragraph",
@@ -37,8 +39,16 @@ const project = {
       type: "imageRow",
       columns: 2,
       images: [
-        { src: "/images/projects/design_tool/1-1.png", alt: "Structure connection visualization 1" },
-        { src: "/images/projects/design_tool/1-2.png", alt: "Structure connection visualization 2" },
+        {
+          src: "/images/projects/design_tool/1-1.png",
+          alt: "Structure connection visualization 1",
+          placeholder: "/images/projects/design_tool/1-1.thumb.png",
+        },
+        {
+          src: "/images/projects/design_tool/1-2.png",
+          alt: "Structure connection visualization 2",
+          placeholder: "/images/projects/design_tool/1-2.thumb.png",
+        },
       ],
     },
     {
@@ -57,6 +67,7 @@ const project = {
       type: "image",
       src: "/images/projects/design_tool/2.png",
       alt: "Constraint visualization in Grasshopper",
+      placeholder: "/images/projects/design_tool/2.thumb.png",
     },
     {
       type: "paragraph",
@@ -66,8 +77,16 @@ const project = {
       type: "imageRow",
       columns: 2,
       images: [
-        { src: "/images/projects/design_tool/3-1.png", alt: "Interactive modeling constraint 1" },
-        { src: "/images/projects/design_tool/3-2.png", alt: "Interactive modeling constraint 2" },
+        {
+          src: "/images/projects/design_tool/3-1.png",
+          alt: "Interactive modeling constraint 1",
+          placeholder: "/images/projects/design_tool/3-1.thumb.png",
+        },
+        {
+          src: "/images/projects/design_tool/3-2.png",
+          alt: "Interactive modeling constraint 2",
+          placeholder: "/images/projects/design_tool/3-2.thumb.png",
+        },
       ],
     },
     {
@@ -78,6 +97,7 @@ const project = {
       type: "image",
       src: "/images/projects/design_tool/5.jpg",
       alt: "Detail sketches",
+      placeholder: "/images/projects/design_tool/5.thumb.jpg",
     },
     {
       type: "paragraph",
@@ -87,6 +107,7 @@ const project = {
       type: "image",
       src: "/images/projects/design_tool/6.png",
       alt: "grasshopper",
+      placeholder: "/images/projects/design_tool/6.thumb.png",
     },
     {
       type: "paragraph",
@@ -96,6 +117,7 @@ const project = {
       type: "image",
       src: "/images/projects/design_tool/7.png",
       alt: "Constraint boundary visualization",
+      placeholder: "/images/projects/design_tool/7.thumb.png",
     },
     {
       type: "paragraph",

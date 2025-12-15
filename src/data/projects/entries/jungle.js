@@ -7,7 +7,9 @@ const project = {
   excerpt: "Urban-regeneration proposal for Donui-dong’s jjokbangchon that preserves the ground-level alley texture as exhibition/retail, caps it with a structural pedestrian deck as shared open space, and adds compliant one-person housing above—supplemented by lifestyle lodging to make participation economically viable.",
   hero: "/images/projects/jungle/hero.png",
   heroSmall: "/images/projects/jungle/hero.png",
+  heroThumb: "/images/projects/jungle/hero.thumb.png",
   thumb: "/images/projects/jungle/thumbnail.png",
+  thumbPlaceholder: "/images/projects/jungle/thumbnail.thumb.png",
   content: [
     {
       type: "paragraph",
@@ -17,6 +19,7 @@ const project = {
       type: "image",
       src: "/images/projects/jungle/jungle_1.png",
       alt: "Raising the Alley project image 1",
+      placeholder: "/images/projects/jungle/jungle_1.thumb.png",
     },
     {
       type: "paragraph",
@@ -26,6 +29,7 @@ const project = {
       type: "image",
       src: "/images/projects/jungle/jungle_2.png",
       alt: "Raising the Alley project image 2",
+      placeholder: "/images/projects/jungle/jungle_2.thumb.png",
     },
     {
       type: "paragraph",
@@ -35,6 +39,7 @@ const project = {
       type: "image",
       src: "/images/projects/jungle/jungle_3.png",
       alt: "Raising the Alley project image 3",
+      placeholder: "/images/projects/jungle/jungle_3.thumb.png",
     },
     {
       type: "paragraph",
@@ -44,6 +49,7 @@ const project = {
       type: "image",
       src: "/images/projects/jungle/jungle_4.png",
       alt: "Raising the Alley project image 4",
+      placeholder: "/images/projects/jungle/jungle_4.thumb.png",
     },
     {
       type: "paragraph",
@@ -53,6 +59,7 @@ const project = {
       type: "image",
       src: "/images/projects/jungle/jungle_5.png",
       alt: "Raising the Alley project image 5",
+      placeholder: "/images/projects/jungle/jungle_5.thumb.png",
     },
     {
       type: "paragraph",
@@ -62,6 +69,7 @@ const project = {
       type: "image",
       src: "/images/projects/jungle/jungle_6.png",
       alt: "Raising the Alley project image 6",
+      placeholder: "/images/projects/jungle/jungle_6.thumb.png",
     },
   ],
 };

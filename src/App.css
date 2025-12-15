@@ -284,6 +284,10 @@ u {
   width: auto;
   border-radius: 8px;
 }
+.project-image-row__item .progressive-image__img,
+.project-image-row__item .progressive-image__placeholder {
+  border-radius: inherit;
+}
 
 @media (max-width: 600px) {
   .project-image-row {

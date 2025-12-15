@@ -1,77 +1,46 @@
 // src/components/ProjectsList.jsx
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import projects from "../data/projects";
-import { deriveThumbSrc } from "./LightboxImage";
+import ProgressiveImage from "./ProgressiveImage";
+import { deriveThumbSrc } from "../utils/imagePaths";
 
 function getProjectThumb(project) {
-  return project.listThumb || project.thumb || deriveThumbSrc(project.hero) || project.hero;
+  return project.listThumb || project.thumb || project.hero;
 }
 
 function getProjectThumbPlaceholder(project) {
-  // 저해상도 썸네일 경로 생성 (이미 .thumb 확장자가 있으면 그대로 사용, 없으면 추가)
-  const fullThumb = getProjectThumb(project);
-  if (!fullThumb) return null;
-  
-  // 이미 .thumb가 포함되어 있으면 그대로 사용
-  if (fullThumb.includes('.thumb.')) return fullThumb;
-  
-  // .thumb 확장자 추가
-  return deriveThumbSrc(fullThumb) || fullThumb;
+  if (project.listThumb && project.listThumbPlaceholder) return project.listThumbPlaceholder;
+  if (project.thumb && project.thumbPlaceholder) return project.thumbPlaceholder;
+  if (project.heroThumb) return project.heroThumb;
+  const thumbSource = getProjectThumb(project);
+  return deriveThumbSrc(thumbSource);
 }
 
 function ProjectThumbnail({ project }) {
-  const [imageLoaded, setImageLoaded] = useState(false);
-  const imgRef = useRef(null);
-  const fullImageSrc = getProjectThumb(project);
-  const placeholderSrc = getProjectThumbPlaceholder(project);
-  const displayPlaceholder = placeholderSrc && placeholderSrc !== fullImageSrc;
+  const src = getProjectThumb(project);
+  const placeholder = getProjectThumbPlaceholder(project);
+  const fallbackSrc = project.hero;
+  const [resolvedSrc, setResolvedSrc] = useState(src);
 
-  // 이미지가 이미 로드되어 있는지 확인 (캐시된 경우)
   useEffect(() => {
-    const img = imgRef.current;
-    if (!img) return;
-    
-    // 이미지가 완전히 로드되어 있으면 즉시 블러 제거
-    if (img.complete && img.naturalWidth > 0) {
-      setImageLoaded(true);
-    }
-  }, [fullImageSrc]);
+    setResolvedSrc(src);
+  }, [src]);
 
-  const handleImageLoad = () => {
-    setImageLoaded(true);
-  };
-
-  const handleImageError = (event) => {
-    if (event.currentTarget.src !== project.hero) {
-      event.currentTarget.src = project.hero;
-    } else {
-      setImageLoaded(true);
-    }
+  const handleError = () => {
+    if (!fallbackSrc || resolvedSrc === fallbackSrc) return;
+    setResolvedSrc(fallbackSrc);
   };
 
   return (
-    <div className="project-thumb-wrapper">
-      {displayPlaceholder && (
-        <img
-          src={placeholderSrc}
-          alt=""
-          className="project-thumb-placeholder"
-          aria-hidden="true"
-          onError={(e) => {
-            e.currentTarget.style.display = 'none';
-          }}
-        />
-      )}
-      <img
-        ref={imgRef}
-        src={fullImageSrc}
-        alt={project.title}
-        className={`project-thumb-full ${imageLoaded ? 'loaded' : ''}`}
-        loading="lazy"
-        onLoad={handleImageLoad}
-        onError={handleImageError}
-      />
-    </div>
+    <ProgressiveImage
+      src={resolvedSrc}
+      placeholder={placeholder}
+      alt={project.title}
+      className="project-thumb-media"
+      wrapperStyle={{ width: "100%", height: "100%" }}
+      imageStyle={{ width: "100%", height: "100%", objectFit: "cover" }}
+      onError={handleError}
+    />
   );
 }
 

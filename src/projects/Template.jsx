@@ -16,7 +16,7 @@ export default function Template({ title, category, date, hero, heroThumb, child
     <article className="container section project-detail">
       {hero && (
         <div className="project-hero">
-          <LightboxImage src={hero} thumb={heroThumb} alt={title} style={{ margin: "0 0 24px" }} />
+          <LightboxImage src={hero} placeholder={heroThumb} alt={title} style={{ margin: "0 0 24px" }} />
         </div>
       )}
       <h1><span className="badge">{title}</span></h1>

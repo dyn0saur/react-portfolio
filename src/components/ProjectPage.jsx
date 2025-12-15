@@ -230,7 +230,7 @@ function ImageRow({ images, style, rowId }) {
             key={`${rowId || "image-row"}-${idx}`}
             src={image.src}
             alt={image.alt || ""}
-            thumb={image.thumb}
+            placeholder={image.placeholder || image.thumb}
             className="project-image-row__item"
             style={imageStyle}
             onLoad={handleLoad}
@@ -254,7 +254,7 @@ function renderBlock(block, index) {
         key={key}
         src={block.src}
         alt={block.alt || ""}
-        thumb={block.thumb || block.src}
+        placeholder={block.placeholder || block.thumb}
         style={block.style || DEFAULT_IMAGE_STYLE}
         caption={block.caption}
       />

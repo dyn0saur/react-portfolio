@@ -6,12 +6,15 @@ const project = {
   excerpt: "A reflection on the intricate process of my first detail design — bridging fabrication and installation through endless problem-solving.",
   hero: "/images/projects/detail_drawing/hero.jpg",
   heroSmall: "/images/projects/detail_drawing/hero.jpg",
+  heroThumb: "/images/projects/detail_drawing/hero.thumb.jpg",
   thumb: "/images/projects/detail_drawing/thumbnail.jpg",
+  thumbPlaceholder: "/images/projects/detail_drawing/thumbnail.thumb.jpg",
   content: [
     {
       type: "image",
       src: "/images/projects/detail_drawing/1.jpg",
       alt: "detail drawing image",
+      placeholder: "/images/projects/detail_drawing/1.thumb.jpg",
     },
     {
       type: "paragraph",
